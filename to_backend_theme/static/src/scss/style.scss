@@ -152,10 +152,8 @@ oe_highlight {
     background: #ffffff;
 }
 
-// Badges
-
-.badge {
-    border: 1px solid $brand-secondary;
+.o_form_view .oe_button_box .oe_stat_button .o_button_icon {
+    color: $brand-primary !important;
 }
 
 // Calendar
