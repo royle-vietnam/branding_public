@@ -149,6 +149,10 @@ oe_highlight {
     background: #ffffff;
 }
 
+.o_form_view .oe_button_box .oe_stat_button .o_button_icon {
+    color: $brand-primary !important;
+}
+
 // Calendar
 
 .o_calendar_container .o_calendar_sidebar_container .ui-datepicker table .ui-state-active {
