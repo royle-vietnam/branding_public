@@ -5,6 +5,7 @@
 		<value>crm</value>
 		<value>viin_brand_crm</value>
 	</function>
+	
 	<function model="viin.brand.base" name="update_menu_icon">
 		<value>self</value>
 		<value>viin_brand_crm</value>
