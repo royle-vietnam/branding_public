@@ -461,3 +461,13 @@ textarea, select, .o_form_view.o_form_editable .o_form_field_many2manytags,
 		}
 	}
 }
+
+@media (max-width: 767.98px) {
+	.o_main_navbar {
+		.show {
+			.dropdown-toggle {
+				background-color: #ffffff !important;
+			}
+		}
+	}
+}
