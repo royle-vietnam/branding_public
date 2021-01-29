@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+	<data>
+		<template id="assets_frontend" name="Viindoo Fontend Theme"
+			inherit_id="web.assets_frontend">
+			<xpath expr=".">
+				<link rel="stylesheet" type="text/scss"
+					href="/viin_brand_common/static/src/scss/website_frontend.scss" />
+			</xpath>
+		</template>
+
+		<template id="assets_common"
+			name="Viindoo Common Theme " inherit_id="web.assets_common">
+			<xpath expr=".">
+				<link rel="stylesheet" type="text/scss"
+					href="/viin_brand_common/static/src/scss/website_common.scss" />
+			</xpath>
+		</template>
+	</data>
+</odoo>

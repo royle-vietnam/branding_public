@@ -1,0 +1,32 @@
+/* Copyright 2016, 2019 Openworx.
+ * License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). */
+
+// Change colors here
+$o-enterprise-primary-color: #7f4282;
+
+$brand-secondary: $o-enterprise-primary-color;
+
+$brand-secondary-dark: darken($brand-secondary, 10%);
+$brand-secondary-darker: darken($brand-secondary, 20%);
+
+#oe_main_menu_navbar {
+	.o_menu_systray {
+		> li {
+			> a[data-action="edit"],> a.css_edit_dynamic,> a[data-action="translate"] {
+    			background-color: $brand-secondary;
+    			border-color: $brand-secondary;
+				&:active{
+					background-color: $brand-secondary !important;
+    				border-color: $brand-secondary !important;
+				}
+				&:focus{
+					box-shadow: 0 0 0 0.2rem rgba(127, 66, 130, 0.5);
+				}
+				&:hover{
+					background-color: $brand-secondary-dark;
+    				border-color: $brand-secondary-dark;
+				}
+			}
+		}
+	}
+}
