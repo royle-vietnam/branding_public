@@ -1,21 +1,10 @@
-/* Copyright 2016, 2019 Openworx.
- * License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). */
-
-// Change colors here
-$o-enterprise-primary-color: #7f4282;
-
-$brand-secondary: $o-enterprise-primary-color;
-
-$brand-secondary-dark: darken($brand-secondary, 10%);
-$brand-secondary-darker: darken($brand-secondary, 20%);
-
 .o_main_navbar {
-	background-color : $brand-secondary;
-	border-bottom: 1px solid $brand-secondary-dark;
+	background-color : $v-brand-primary;
+	border-bottom: 1px solid $v-brand-primary-dark;
 	
 	.show {
 		.dropdown-toggle {
-			background-color: $brand-secondary-dark !important;
+			background-color: $v-brand-primary-dark !important;
 			color: #ffffff !important;
 		}
 		.dropdown-header{
@@ -28,7 +17,7 @@ $brand-secondary-darker: darken($brand-secondary, 20%);
 	> button {
 		&:hover,
 		&:focus {
-			background-color: $brand-secondary;
+			background-color: $v-brand-primary;
 			color: inherit;
 		}
 	}
@@ -39,7 +28,7 @@ $brand-secondary-darker: darken($brand-secondary, 20%);
 			> a {
 				&:hover,
 				&:focus{
-					background-color: $brand-secondary-dark;
+					background-color: $v-brand-primary-dark;
 				}
 			}
 		}
@@ -48,9 +37,9 @@ $brand-secondary-darker: darken($brand-secondary, 20%);
 
 .picker-switch{
 	span.fa.primary {
-		background-color : $brand-secondary;
+		background-color : $v-brand-primary;
 	}
 	span.fa.primary:hover {
-		background-color : $brand-secondary-dark;
+		background-color : $v-brand-primary-dark;
 	}
 }

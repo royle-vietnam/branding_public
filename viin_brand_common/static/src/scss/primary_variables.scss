@@ -1,0 +1,6 @@
+// Change colors here
+$v-enterprise-primary-color: #7f4282;
+$v-brand-primary: $v-enterprise-primary-color;
+
+$v-brand-primary-dark: darken($v-brand-primary, 10%);
+$v-brand-primary-darker: darken($v-brand-primary, 20%);
