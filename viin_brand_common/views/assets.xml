@@ -10,20 +10,56 @@
 					href="/viin_brand_common/static/src/scss/primary_variables.scss" />
 			</xpath>
 		</template>
-		
-		<template id="assets_frontend" name="Viindoo Fontend Theme"
-			inherit_id="web.assets_frontend">
-			<xpath expr=".">
+
+
+		<template id="_assets_secondary_variables"
+			inherit_id="web._assets_secondary_variables" priority="15">
+			<xpath expr="//link" position="before">
 				<link rel="stylesheet" type="text/scss"
-					href="/viin_brand_common/static/src/scss/website_frontend.scss" />
+					href="/viin_brand_common/static/src/scss/secondary_variables.scss" />
 			</xpath>
 		</template>
 
-		<template id="assets_common" name="Viindoo Common Theme "
+		<template id="_assets_backend_helpers"
+			inherit_id="web._assets_backend_helpers">
+			<xpath
+				expr="//link[@href='/web/static/src/scss/bootstrap_overridden.scss']"
+				position="replace">
+				<link rel="stylesheet" type="text/scss"
+					href="/viin_brand_common/static/src/scss/bootstrap_overridden.scss" />
+			</xpath>
+		</template>
+
+		<template id="assets_common"
+			name="Viindoo Common Assets (to be used in both backend and website)"
 			inherit_id="web.assets_common">
 			<xpath expr=".">
 				<link rel="stylesheet" type="text/scss"
-					href="/viin_brand_common/static/src/scss/website_common.scss" />
+					href="/viin_brand_common/static/src/scss/navbar.scss" />
+				<link rel="stylesheet" type="text/scss"
+					href="/viin_brand_common/static/src/scss/systray.scss" />
+			</xpath>
+		</template>
+
+		<template id="assets_backend" inherit_id="web.assets_backend"
+			name="Backend Assets (to be used in backend">
+			<xpath
+				expr="//link[@href='/web/static/src/scss/fields_extra.scss']"
+				position="after">
+				<link rel="stylesheet" type="text/scss"
+					href="/viin_brand_common/static/src/scss/fields_extra.scss" />
+			</xpath>
+			<xpath
+				expr="//link[@href='/web/static/src/scss/form_view_extra.scss']"
+				position="after">
+				<link rel="stylesheet" type="text/scss"
+					href="/viin_brand_common/static/src/scss/form_view_extra.scss" />
+			</xpath>
+			<xpath
+				expr="//link[@href='/base/static/src/scss/onboarding.scss']"
+				position="after">
+				<link rel="stylesheet" type="text/scss"
+					href="/viin_brand_common/static/src/scss/onboarding.scss" />
 			</xpath>
 		</template>
 	</data>

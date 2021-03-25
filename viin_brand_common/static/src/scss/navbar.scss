@@ -1,0 +1,24 @@
+.o_main_navbar {
+	background-color : $brand-primary-dark;
+	border-bottom: 1px solid $brand-primary-darker;
+
+	> a,
+	> button {
+		&:hover,
+		&:focus {
+			background-color: $brand-primary-dark;
+		}
+	}
+
+	> ul {
+		> li {
+			> label,
+			> a {
+				&:hover,
+				&:focus{
+					background-color: $brand-primary-darker;
+				}
+			}
+		}
+	}
+}
