@@ -1,0 +1,32 @@
+.o_form_view {
+
+    // Button box
+    .oe_button_box {
+        .oe_stat_button {
+            .o_button_icon {
+                color: $o-brand-primary;
+            }
+        }
+    }
+
+	.o_form_statusbar {
+		//margin: -16px;
+		.o_statusbar_status {
+			> .o_arrow_button {
+				background: #ffffff;
+				&.btn-primary{
+					&.disabled {
+						color: $brand-secondary;
+					}
+				}
+				&:not(.disabled) {
+					&:hover,
+					&:active,
+					&:focus {
+						color: $brand-secondary-dark;
+					}
+				}
+			}
+		}
+	}
+}
