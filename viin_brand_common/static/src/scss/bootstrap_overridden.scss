@@ -7,16 +7,16 @@
 // Color system
 //
 :root {
-  --primary: #00bbce;
-  --secondary: #7f4282;
-  --gray: #999999;
-  --gray-dark: #343a40;
-  --success: #28a745;
-  --info: #0099E6;
-  --warning: #FFCC32;
-  --danger: #CC5252;
-  --light: #F4F4F4;
-  --dark: #323232;
+  --primary: #00bbce !important;
+  --secondary: #7f4282 !important;
+  --gray: #999999 !important;
+  --gray-dark: #343a40 !important;
+  --success: #00B365 !important;
+  --info: #0099E6 !important;
+  --warning: #FFCC32 !important;
+  --danger: #CC5252 !important;
+  --light: #F4F4F4 !important;
+  --dark: #323232 !important;
 }
 // All of those are BS default
 $white:    #fff !default;
