@@ -1,0 +1,27 @@
+.o_searchview
+{
+	border: 0;
+	border-radius: 0;
+	border-bottom: 1px solid $gray-200;
+}
+
+.o_web_client {
+	input,
+	textarea,
+	select {
+		&:focus {
+			outline: none;
+			border-bottom: 2px solid $brand-primary;
+		}
+	}
+	.o_mobile_search {
+		.o_mobile_search_header {
+			background-color: $brand-primary-dark;
+			span {
+				&:active {
+					background-color: $brand-primary-darker;
+				}
+			}
+		}
+	}
+}

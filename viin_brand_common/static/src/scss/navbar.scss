@@ -1,6 +1,5 @@
 .o_main_navbar {
 	background-color : $brand-primary-dark;
-	border-bottom: 1px solid $brand-primary-darker;
 
 	> a,
 	> button {
@@ -12,11 +11,24 @@
 
 	> ul {
 		> li {
+			&.o_extra_menu_items {
+				&.show {
+					> ul {
+						> li {
+							> a {
+								&.dropdown-toggle {
+									background-color: $brand-primary-dark !important;
+								}
+							}
+						}
+					}
+				}
+			}
 			> label,
 			> a {
 				&:hover,
 				&:focus{
-					background-color: $brand-primary-darker;
+					background-color: $brand-primary-dark;
 				}
 			}
 		}

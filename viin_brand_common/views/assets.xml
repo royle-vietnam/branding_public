@@ -56,6 +56,12 @@
 					href="/viin_brand_common/static/src/scss/form_view_extra.scss" />
 			</xpath>
 			<xpath
+				expr="//link[@href='/web/static/src/scss/search_view_extra.scss']"
+				position="after">
+				<link rel="stylesheet" type="text/scss"
+					href="/viin_brand_common/static/src/scss/search_view.scss" />
+			</xpath>
+			<xpath
 				expr="//link[@href='/base/static/src/scss/onboarding.scss']"
 				position="after">
 				<link rel="stylesheet" type="text/scss"
