@@ -1,6 +1,12 @@
 .o_main_navbar {
 	background-color : $brand-primary-dark;
 
+	.show {
+		.dropdown-toggle {
+			background-color: $brand-primary-darker;
+		}
+	}
+
 	> a,
 	> button {
 		&:hover,
