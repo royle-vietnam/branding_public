@@ -13,3 +13,13 @@
 		}
 	}
 }
+
+.o_mail_discuss {
+	.o_mail_discuss_sidebar {
+		.o_mail_discuss_item {
+			&.o_active {
+				box-shadow: inset 3px 0 0 $brand-primary !important;
+			}
+		}
+	}
+}
