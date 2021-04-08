@@ -30,3 +30,15 @@
 		}
 	}
 }
+
+.o_field_widget {
+	&.o_field_image {
+		.o_form_image_controls {
+			> button {
+				&.fa {
+					color: $white;
+				}
+			}
+		}
+	}
+}

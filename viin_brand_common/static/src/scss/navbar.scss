@@ -1,5 +1,6 @@
 .o_main_navbar {
 	background-color : $brand-primary-dark;
+	border-bottom: 1px solid $brand-primary-darker;
 
 	.show {
 		.dropdown-toggle {
