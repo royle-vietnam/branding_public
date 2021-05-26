@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="support_page" inherit_id="im_livechat.support_page">
+        	<xpath expr="//head/style[@type='text/css'][last()]" position="after">
+        		<style type="text/css">
+                        body {
+                            background-image: -webkit-linear-gradient(top, #005e68, #00e7ff);
+                            background-image: -moz-linear-gradient(top, #005e68, #00e7ff);
+                            background-image: -ms-linear-gradient(top, #005e68, #00e7ff);
+                            background-image: -o-linear-gradient(top, #005e68, #00e7ff);
+                            background-image: linear-gradient(to bottom, #005e68, #00e7ff);
+                            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#005e68', endColorstr='#00e7ff',GradientType=0 );
+                        }
+                    </style>
+        	</xpath>
+        	<xpath expr="//body/div[hasclass('main')]/div/strong[text()='Odoo']" position="replace">
+        		<strong>Viindoo</strong>
+        	</xpath>
+
+        </template>
+        
+        <template id="external_lib" inherit_id="im_livechat.external_lib">
+        	<xpath
+				expr="//link[@href='/im_livechat/static/src/scss/im_livechat.scss']"
+				position="after">
+				<link rel="stylesheet" type="text/scss"
+					href="/viin_brand_im_livechat/static/src/scss/im_livechat.scss" />
+			</xpath>
+        </template>
+
+    </data>
+</odoo>
