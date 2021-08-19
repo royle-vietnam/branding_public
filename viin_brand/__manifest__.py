@@ -42,7 +42,7 @@ Mô đun này thay đổi một vài thông tin dành riêng cho thương hiệu
     ],
     'data' : [
     ],
-    'installable': True,
+    'installable': False,
     'application': False,
     'auto_install': False,
     'price': 99.9,

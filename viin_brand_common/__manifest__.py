@@ -43,9 +43,9 @@ Mô đun này thay đổi một vài thông tin dành riêng cho thương hiệu
     'data' : [
         'views/assets.xml'
     ],
-    'installable': True,
+    'installable': False,
     'application': False,
-    'auto_install': True,
+    'auto_install': False, # mark this as True after upgrade for Odoo 14
     'price': 99.9,
     'currency': 'EUR',
     'license': 'OPL-1',
