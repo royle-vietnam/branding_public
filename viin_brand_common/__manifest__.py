@@ -36,12 +36,13 @@ Mô đun này thay đổi một vài thông tin dành riêng cho thương hiệu
     'support': "apps.support@viindoo.com",
     'category': 'Hidden',
     'version': '0.1',
-    'depends': ['web'],
-    'images' : [
+    'depends': ['viin_brand', 'web'],
+    'images': [
         'static/description/icon.png'
     ],
-    'data' : [
-        'views/assets.xml'
+    'data': [
+        'views/assets.xml',
+        'views/webclient_template.xml'
     ],
     'installable': True,
     'application': False,
