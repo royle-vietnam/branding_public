@@ -44,7 +44,7 @@ Mô đun này thay đổi một vài thông tin dành riêng cho thương hiệu
     ],
     'installable': False,
     'application': False,
-    'auto_install': False,
+    'auto_install': True,
     'price': 99.9,
     'currency': 'EUR',
     'license': 'OPL-1',
