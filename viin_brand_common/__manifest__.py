@@ -43,7 +43,7 @@ Mô đun này thay đổi một vài thông tin dành riêng cho thương hiệu
     ],
     'installable': True,
     'application': False,
-    'auto_install': ['web'],
+    'auto_install': ['web'], # mark this as ['web'] after upgrade for Odoo 14
     'price': 99.9,
     'currency': 'EUR',
     'license': 'OPL-1',
