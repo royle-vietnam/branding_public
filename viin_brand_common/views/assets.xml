@@ -86,6 +86,12 @@
 				<link rel="stylesheet" type="text/scss"
 					href="/viin_brand_common/static/src/scss/base_settings.scss" />
 			</xpath>
+			<xpath
+				expr="//link[@href='/web/static/src/scss/progress_bar.scss']"
+				position="after">
+				<link rel="stylesheet" type="text/scss"
+					href="/viin_brand_common/static/src/scss/progress_bar.scss" />
+			</xpath>
 		</template>
 	</data>
 </odoo>
