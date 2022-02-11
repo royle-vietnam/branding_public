@@ -56,9 +56,9 @@ Module này sẽ thay đổi màu sắc của thanh điều hướng (navbar), c
     'qweb': [
         'static/src/xml/Chrome.xml',
         ],
-    'installable': True,
+    'installable': False,
     'application': False,
-    'auto_install': True,
+    'auto_install': False, # Set this as True after upgrading for v15
     'price': 0.0,
     'currency': 'EUR',
     'license': 'OPL-1',

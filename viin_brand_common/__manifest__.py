@@ -41,9 +41,9 @@ Mô đun này thay đổi một vài thông tin dành riêng cho thương hiệu
         'views/assets.xml',
         'views/webclient_template.xml'
     ],
-    'installable': True,
+    'installable': False,
     'application': False,
-    'auto_install': ['web'],
+    'auto_install': False, # Set this as ['web'] after upgrading for v15
     'price': 99.9,
     'currency': 'EUR',
     'license': 'OPL-1',
