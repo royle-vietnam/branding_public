@@ -39,6 +39,7 @@ Editions Supported
 
     # always loaded
     'data': [
+        'views/assets.xml',
         'views/mail_data.xml',
         'views/res_config_settings_views.xml',
     ],
