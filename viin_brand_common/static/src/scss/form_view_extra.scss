@@ -19,6 +19,16 @@
 			}
         }
     }
+    
+    .oe_form_field_html {
+        span {
+            &.o_field_translate {
+                &.btn-link {
+                    color: $white;
+                }
+            }
+        }
+    }
 
 	.o_form_statusbar {
 		//margin: -16px;

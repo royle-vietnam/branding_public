@@ -1,0 +1,18 @@
+// ------------------------------------------------------------------
+// Layout
+// ------------------------------------------------------------------
+.o_Message {
+    padding-top: 5px;
+    padding-bottom: 0;
+}
+.o_Message_sidebarItem {
+    font-size: 0.9em;
+}
+.o_Message_sidebar {
+    &.o-message-squashed{
+        align-items: baseline;
+    }
+}
+.o_Message_header {
+    padding-top: 10px;
+}

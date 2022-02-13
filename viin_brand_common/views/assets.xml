@@ -49,7 +49,7 @@
 		</template>
 
 		<template id="assets_backend" inherit_id="web.assets_backend"
-			name="Backend Assets (to be used in backend">
+			name="Backend Assets (to be used in backend)">
 			<xpath
 				expr="//link[@href='/web/static/src/scss/fields_extra.scss']"
 				position="after">
