@@ -10,9 +10,9 @@
 	&.o_input,
 	.o_input{
 		background-color: $brand-secondary-super-lighter !important;
-		border-bottom: 1px solid $brand-secondary;
+        border-bottom: 1px solid $gray-300;
 		&:focus{
-			border-bottom: 2px solid $brand-secondary !important;
+			border-bottom: 1px solid $brand-secondary;
 		}
 	}
 }
