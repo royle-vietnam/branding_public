@@ -1,30 +1,38 @@
-# -*- coding: utf-8 -*-
 {
-    'name': "Website Live Chat Debranding for Viindoo",
-    'name_vi_VN': "",
+    'name': "Unsplash Image Library Branding For Viindoo",
+    'name_vi_VN': "Giao diện Viindoo cho module Unsplash Image Library ",
 
     'summary': """
-Debranding Website Live Chat for Viindoo""",
-
+Theme branding Viindoo for module Unsplash Image Library""",
     'summary_vi_VN': """
-Làm lại màu sắc Website Live Chat theo thương hiệu Viindoo
-    	""",
+Giao diện brand Viindoo cho module Point Of Sale
+""",
 
     'description': """
+What it does
+============
+This module will change color in navigate bar, button and logo,v.v following Viindoo's brand
+
 
 Editions Supported
 ==================
 1. Community Edition
+2. Enterprise Edition
 
     """,
 
     'description_vi_VN': """
+Ứng dụng này làm gì
+===================
+Module này sẽ thay đổi giao diện theo thương hiệu Viindoo
+
 
 Ấn bản được Hỗ trợ
 ==================
 1. Ấn bản Community
+2. Ấn bản Enterprise
 
-    """,
+""",
 
     'author': "Viindoo",
     'website': "https://viindoo.com",
@@ -33,26 +41,21 @@ Editions Supported
     'support': "apps.support@viindoo.com",
 
     # Categories can be used to filter modules in modules listing
-    # Check https://github.com/tvtma/odoo/blob/13.0/odoo/addons/base/data/ir_module_category_data.xml
+    # Check https://github.com/odoo/odoo/blob/14.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
     'category': 'Hidden',
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['website_livechat', 'viin_brand_im_livechat'],
+    'depends': ['web_unsplash'],
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
-        'views/website_livechat.xml',
+        'views/res_config_settings_view.xml',
     ],
-
-    'images': [
-    	# 'static/description/main_screenshot.png'
-    	],
-    'installable': False,
+    'installable': True,
     'application': False,
-    'auto_install': False, # Set this as True after upgrading for v15
+    'auto_install': True,
     'price': 0.0,
     'currency': 'EUR',
     'license': 'OPL-1',
