@@ -53,9 +53,9 @@ Module này sẽ thay đổi giao diện theo thương hiệu Viindoo
     'data': [
         'views/res_config_settings_view.xml',
     ],
-    'installable': True,
+    'installable': False,
     'application': False,
-    'auto_install': True,
+    'auto_install': False, # Set this True after upgrade for v15
     'price': 0.0,
     'currency': 'EUR',
     'license': 'OPL-1',
