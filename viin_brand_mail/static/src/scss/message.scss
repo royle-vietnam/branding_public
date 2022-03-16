@@ -9,6 +9,9 @@
     font-size: 0.9em;
 }
 .o_Message_sidebar {
+    max-width: 43px;
+    flex: 0 0 43px;
+    margin-inline-end: 0.3rem;
     &.o-message-squashed{
         align-items: baseline;
     }
