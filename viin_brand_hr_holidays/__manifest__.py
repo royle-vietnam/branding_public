@@ -41,9 +41,9 @@ Editions Supported
     'data': [
         'views/assets.xml',
     ],
-    'installable': True,
+    'installable': False,
     'application': False,
-    'auto_install': True,
+    'auto_install': False, # Set this as True after upgrading for v15
     'price': 9.9,
     'currency': 'EUR',
     'license': 'OPL-1',
