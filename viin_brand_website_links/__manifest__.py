@@ -1,17 +1,17 @@
 {
-    'name': "Mass Mailing On Lead / Opportunities Branding For Viindoo",
-    'name_vi_VN': "Giao diện Viindoo cho module Mass Mailing On Lead / Opportunities",
+    'name': "Link Tracker Branding For Viindoo",
+    'name_vi_VN': "Giao diện Viindoo cho module Link Tracker",
 
     'summary': """
-Theme branding Viindoo for module Mass Mailing On Lead / Opportunities""",
+Theme branding Viindoo for module Link Tracker""",
     'summary_vi_VN': """
-Giao diện brand Viindoo cho module Mass Mailing On Lead / Opportunities
+Giao diện brand Viindoo cho module Link Tracker
 """,
 
     'description': """
 What it does
 ============
-This module will change color navigate bar, button and logo,v.v in Mass Mailing On Lead / Opportunities following Viindoo's brand
+This module will change color in navigate bar, button and logo,v.v following Viindoo's brand
 
 
 Editions Supported
@@ -24,7 +24,7 @@ Editions Supported
     'description_vi_VN': """
 Ứng dụng này làm gì
 ===================
-Module này sẽ thay đổi giao diện các module Mass Mailing On Lead / Opportunities theo thương hiệu Viindoo
+Module này sẽ thay đổi giao diện module Link Tracker theo thương hiệu Viindoo
 
 
 Ấn bản được Hỗ trợ
@@ -47,15 +47,15 @@ Module này sẽ thay đổi giao diện các module Mass Mailing On Lead / Oppo
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['mass_mailing_crm'],
+    'depends': ['website_links'],
 
     # always loaded
-    'demo': [
-        'data/mass_mailing_demo.xml',
+    'data': [
+        'views/website_links_template.xml',
     ],
-    'installable': False,
+    'installable': True,
     'application': False,
-    'auto_install': False, # Set True after upgrading for v15
+    'auto_install': True,
     'price': 0.0,
     'currency': 'EUR',
     'license': 'OPL-1',
