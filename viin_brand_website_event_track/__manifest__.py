@@ -53,9 +53,9 @@ Module này sẽ thay đổi giao diện module Advanced Events theo thương hi
     'data': [
         'views/event_sponsor_views.xml',
     ],
-    'installable': True,
+    'installable': False,
     'application': False,
-    'auto_install': True,
+    'auto_install': False, # Set True after upgrading for v15
     'price': 0.0,
     'currency': 'EUR',
     'license': 'OPL-1',
