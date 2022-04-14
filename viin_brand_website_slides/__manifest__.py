@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Website Debranding for Viindoo",
+    'name': "eLearning Debranding for Viindoo",
     'name_vi_VN': "",
 
     'summary': """
-Debranding Website Builder for Viindoo""",
+Debranding eLearning for Viindoo""",
 
     'summary_vi_VN': """
-Làm lại màu sắc Bộ công cụ dựng website theo thương hiệu Viindoo
+Làm lại màu sắc Phần mềm eLearning theo thương hiệu Viindoo
     	""",
 
     'description': """
@@ -33,30 +33,26 @@ Editions Supported
     'support': "apps.support@viindoo.com",
 
     # Categories can be used to filter modules in modules listing
-    # Check https://github.com/tvtma/odoo/blob/13.0/odoo/addons/base/data/ir_module_category_data.xml
+    # Check https://github.com/tvtma/odoo/blob/14.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
     'category': 'Hidden',
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['website'],
+    'depends': ['website_slides'],
 
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
-        'views/assets.xml',
-        'views/templates.xml',
-        'views/res_config_settings_views.xml'
+        'views/slide_slide_views.xml',
     ],
-    'qweb': [
-        'static/src/xml/website_backend.xml',
-        ],
+
     'images': [
     	# 'static/description/main_screenshot.png'
     	],
     'installable': False,
     'application': False,
-    'auto_install': False, # Set this True after upgrade for v15
+    'auto_install': False, # Set ['website_slides'] after upgrading for v15
     'price': 0.0,
     'currency': 'EUR',
     'license': 'OPL-1',
