@@ -53,9 +53,9 @@ Module này sẽ thay đổi giao diện module OAuth2 Authentication theo thư�
     'data': [
         'views/res_config_settings_views.xml',
     ],
-    'installable': True,
+    'installable': False,
     'application': False,
-    'auto_install': True,
+    'auto_install': False, # Set True after upgrading for v15
     'price': 0.0,
     'currency': 'EUR',
     'license': 'OPL-1',
