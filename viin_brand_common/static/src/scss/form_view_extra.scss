@@ -1,4 +1,3 @@
-//.o_form_view .oe_button_box .btn.oe_stat_button > .o_stat_info .o_stat_value, .o_form_view .oe_button_box .btn.oe_stat_button > span .o_stat_value
 .o_form_view {
 
     // Button box
@@ -31,15 +30,15 @@
     }
 
 	.o_form_statusbar {
-		//margin: -16px;
+
 		.o_statusbar_status {
 			> .o_arrow_button {
-				background: #ffffff;
 				&.btn-primary{
 					&.disabled {
 						color: $brand-secondary;
-                        background-color: $gray-200;
-                        &:after, &:before {
+						background-color: $gray-200;
+						font-weight: $font-weight-bold;
+						&:after, &:before {
                             border-left-color: $gray-200;
                         }
 					}
