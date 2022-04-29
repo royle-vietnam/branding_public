@@ -39,6 +39,14 @@ Mô đun này thay đổi một vài thông tin dành riêng cho thương hiệu
     'version': '0.1',
     'depends': ['viin_brand', 'web'],
     'data': [
+<<<<<<< HEAD
+=======
+        'views/assets.xml',
+        'views/ir_module_views.xml',
+        'views/res_company_views.xml',
+        'views/res_partner_views.xml',
+        'views/res_users_views.xml',
+>>>>>>> refs/remotes/origin/14.0
         'views/webclient_template.xml'
     ],
     'assets' : {
