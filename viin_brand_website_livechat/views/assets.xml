@@ -1,0 +1,13 @@
+<odoo>
+	<data>
+		<template id="assets_backend" inherit_id="website_livechat.assets_backend"
+			name="website livechat assets">
+			<xpath
+				expr="//link[@href='/website_livechat/static/src/components/visitor_banner/visitor_banner.scss']"
+				position="after">
+				<link rel="stylesheet" type="text/scss"
+					href="/viin_brand_website_livechat/static/src/components/visitor_banner/visitor_banner.scss" />
+			</xpath>
+		</template>
+	</data>
+</odoo>

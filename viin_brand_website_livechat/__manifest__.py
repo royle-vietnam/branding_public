@@ -45,6 +45,7 @@ Editions Supported
     'data': [
         # 'security/ir.model.access.csv',
         'views/website_livechat.xml',
+        'views/assets.xml',
     ],
 
     'images': [
