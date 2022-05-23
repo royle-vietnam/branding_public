@@ -47,6 +47,10 @@ Editions Supported
     ],
 
     'assets' : {
+        'web.assets_backend': [
+            # mail branding
+            ('after', '/website_livechat/static/src/components/visitor_banner/visitor_banner.scss', '/viin_brand_website_livechat/static/src/components/visitor_banner/visitor_banner.scss'),
+        ],
         'web.assets_frontend' : [
             '/viin_brand_im_livechat/static/src/legacy/public_livechat.scss'
         ],
