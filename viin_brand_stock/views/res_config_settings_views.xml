@@ -29,7 +29,7 @@
                 <attribute name="href">https://viindoo.com/documentation/14.0/applications/supply-chain/inventory.html</attribute>
             </xpath>
             <xpath expr="//div[@id='product_attributes']/div/a" position="attributes">
-                <attribute name="href">https://viindoo.com/documentation/14.0/applications/sales/sales/products-prices/using-product-variants-in-viindoo.html</attribute>
+                <attribute name="href">https://viindoo.com/documentation/14.0/applications/getting-started/products/using-product-variants-in-viindoo.html</attribute>
             </xpath>
             <xpath expr="//div[@id='sell_purchase_uom']/div/a" position="attributes">
                 <attribute name="href">https://viindoo.com/documentation/14.0/applications/supply-chain/inventory/warehouse-management/products/activate-different-units-of-measure.html</attribute>
