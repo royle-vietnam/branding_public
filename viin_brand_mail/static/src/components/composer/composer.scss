@@ -1,0 +1,18 @@
+.o_Composer_textInput {
+    &.o-has-current-partner-avatar.o-composer-is-compact {
+        border-radius: inherit;
+    }
+}
+
+.o_Composer_coreMain:not(.o-composer-is-compact) {
+    border-radius: inherit;
+}
+
+// override channel message composer box only
+.o_ThreadView_core{
+	.o_Composer {
+	    &:not(.o-messaging-in-editing) {
+	        border-top: $border-width solid $border-color;
+	    }
+	}
+}

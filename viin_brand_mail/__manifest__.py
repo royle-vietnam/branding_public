@@ -53,6 +53,7 @@ Editions Supported
             ('after', 'mail/static/src/components/message/message.scss', 'viin_brand_mail/static/src/components/message/message.scss'),
             ('after', 'mail/static/src/components/partner_im_status_icon/partner_im_status_icon.scss', 'viin_brand_mail/static/src/components/partner_im_status_icon/partner_im_status_icon.scss'),
             ('after', 'mail/static/src/components/thread_icon/thread_icon.scss', 'viin_brand_mail/static/src/components/thread_icon/thread_icon.scss'),
+            ('after', 'mail/static/src/components/composer/composer.scss', 'viin_brand_mail/static/src/components/composer/composer.scss'),
         ],
     },
     'installable': True,

@@ -2,8 +2,9 @@
 // Layout
 // ------------------------------------------------------------------
 .o_Message {
-    padding-top: 5px;
+    padding-top: 0 !important;
     padding-bottom: 0;
+    transition: background-color .2s ease-out;
 }
 .o_Message_sidebarItem {
     font-size: 0.9em;
@@ -16,8 +17,12 @@
         align-items: baseline;
     }
 }
-.o_Message_header {
-    color: $text-muted;
+.o_MessageList_separator{
+	font-size: 1rem;
+	color: $text-muted;
+}
+.o_Message_authorName{
+	font-size: 1rem;
 }
 .o_Message_content {
     *:not(li):not(li div) {
