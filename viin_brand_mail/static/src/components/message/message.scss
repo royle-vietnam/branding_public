@@ -5,6 +5,12 @@
     padding-top: 0 !important;
     padding-bottom: 0;
     transition: background-color .2s ease-out;
+    &.o_Message_active {
+		background-color: $light;
+	}
+    &.o-not-discussion {
+		background-color: $light;
+	}
 }
 .o_Message_sidebarItem {
     font-size: 0.9em;
