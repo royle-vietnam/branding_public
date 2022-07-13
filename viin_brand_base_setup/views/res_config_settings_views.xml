@@ -12,7 +12,7 @@
             <xpath expr="//div[@id='allow_import']/div/a" position="attributes">
                 <attribute name="href">https://viindoo.com/documentation/15.0/applications/getting-started/guiding-to-import-and-export-data.html</attribute>
             </xpath>
-            <xpath expr="//a[@href='https://www.odoo.com/documentation/15.0/applications/general/calendars/google/google_calendar_credentials.html']" position="attributes">
+            <xpath expr="//div[@id='sync_google_calendar_setting']/div/a" position="attributes">
                 <attribute name="href">https://viindoo.com/documentation/15.0/applications/productivity/calendar/sychronization-with-google-s-calendar.html</attribute>
             </xpath>
             <xpath expr="//div[@name='auth_ldap_right_pane']/a" position="attributes">
