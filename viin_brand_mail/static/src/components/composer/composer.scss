@@ -8,11 +8,8 @@
     border-radius: inherit;
 }
 
-// override channel message composer box only
-.o_ThreadView_core{
-	.o_Composer {
-	    &:not(.o-messaging-in-editing) {
-	        border-top: $border-width solid $border-color;
-	    }
-	}
+.o_Composer {
+    &:not(.o-messaging-in-editing) {
+        background-color: $light;
+    }
 }
