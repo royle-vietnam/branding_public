@@ -27,11 +27,34 @@ msgid "Email Aliases"
 msgstr ""
 
 #. module: viin_brand_mail
+#: model:ir.model.fields.selection,name:viin_brand_mail.selection__res_users__notification_type__inbox
+msgid "Handle in Viindoo"
+msgstr ""
+
+#. module: viin_brand_mail
+#: model:ir.model.fields,field_description:viin_brand_mail.field_res_users__notification_type
+msgid "Notification"
+msgstr ""
+
+#. module: viin_brand_mail
+#: model:ir.model.fields,help:viin_brand_mail.field_res_users__notification_type
+msgid ""
+"Policy on how to handle Chatter notifications:\n"
+"- Handle by Emails: notifications are sent to your email address\n"
+"- Handle in Odoo: notifications appear in your Odoo Inbox"
+msgstr ""
+
+#. module: viin_brand_mail
 #: model:ir.model.fields,help:viin_brand_mail.field_mail_alias__alias_name
 #: model:ir.model.fields,help:viin_brand_mail.field_mail_channel__alias_name
 msgid ""
 "The name of the email alias, e.g. 'jobs' if you want to catch emails for "
 "<jobs@example.viindoo.com>"
+msgstr ""
+
+#. module: viin_brand_mail
+#: model:ir.model,name:viin_brand_mail.model_res_users
+msgid "Users"
 msgstr ""
 
 #. module: viin_brand_mail
