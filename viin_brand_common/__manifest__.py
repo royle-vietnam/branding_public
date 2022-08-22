@@ -72,6 +72,7 @@ Mô đun này thay đổi một vài thông tin dành riêng cho thương hiệu
             ('after','base/static/src/scss/onboarding.scss','viin_brand_common/static/src/scss/onboarding.scss'),
             ('after','web/static/src/legacy/scss/base_settings.scss','viin_brand_common/static/src/legacy/scss/base_settings.scss'),
             ('after','web/static/src/legacy/scss/progress_bar.scss','viin_brand_common/static/src/legacy/scss/progress_bar.scss'),
+            ('after','web/static/src/webclient/webclient.js','viin_brand_common/static/src/webclient/webclient.js'),
         ],
     },
     'installable': True,
