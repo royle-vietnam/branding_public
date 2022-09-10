@@ -41,3 +41,10 @@
 		}
 	}
 }
+// = SuperUser Design
+// ============================================================================
+body.o_is_superuser .o_menu_systray {
+  &:before {
+    background-color: inherit;
+  }
+}
