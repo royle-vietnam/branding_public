@@ -55,9 +55,9 @@ Module này sẽ thay đổi giao diện các module Purchase theo thương hi�
         'views/res_config_settings_views.xml',
         'views/res_partner_views.xml',
     ],
-    'installable': True,
+    'installable': False,
     'application': False,
-    'auto_install': True,
+    'auto_install': False, # set True after upgrade 16.0
     'price': 0.0,
     'currency': 'EUR',
     'license': 'OPL-1',

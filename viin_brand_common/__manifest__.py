@@ -75,9 +75,9 @@ Mô đun này thay đổi một vài thông tin dành riêng cho thương hiệu
             ('after','web/static/src/webclient/webclient.js','viin_brand_common/static/src/webclient/webclient.js'),
         ],
     },
-    'installable': True,
+    'installable': False,
     'application': False,
-    'auto_install': ['web'],
+    'auto_install': False, # set auto_instal: ['web'] after upgrade to 16.0
     'price': 99.9,
     'currency': 'EUR',
     'license': 'OPL-1',

@@ -53,9 +53,9 @@ Module này sẽ thay đổi giao diện module Events theo thương hiệu Viin
     'demo': [
         'data/event_demo.xml',
     ],
-    'installable': True,
+    'installable': False,
     'application': False,
-    'auto_install': True,
+    'auto_install': False, # set True after upgrade 16.0
     'price': 0.0,
     'currency': 'EUR',
     'license': 'OPL-1',

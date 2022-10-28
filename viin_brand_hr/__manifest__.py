@@ -52,9 +52,9 @@ Module này sẽ thay đổi giao diện module Employees theo thương hiệu V
         'views/hr_employee_public_views.xml',
         'views/hr_employee_views.xml',
     ],
-    'installable': True,
+    'installable': False,
     'application': False,
-    'auto_install': True,
+    'auto_install': False, # set True after upgrade 16.0
     'price': 0.0,
     'currency': 'EUR',
     'license': 'OPL-1',

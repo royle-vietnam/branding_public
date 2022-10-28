@@ -55,9 +55,9 @@ Module này sẽ thay đổi giao diện module Base import theo thương hiệu
             'viin_brand_base_import/static/src/xml/base_import.xml',
             ]
     },
-    'installable': True,
+    'installable': False,
     'application': False,
-    'auto_install': True,
+    'auto_install': False,  # set True after upgrade to 16.0
     'price': 0.0,
     'currency': 'EUR',
     'license': 'OPL-1',

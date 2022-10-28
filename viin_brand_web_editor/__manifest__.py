@@ -43,7 +43,7 @@ Editions Supported
             ('after','web_editor/static/src/scss/web_editor.backend.scss','viin_brand_web_editor/static/src/scss/web_editor.backend.scss'),
         ],
     },
-    'installable': True,
+    'installable': False,
     'application': False,
     'auto_install': ['web_editor'],
     'price': 9.9,

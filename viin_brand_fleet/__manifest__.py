@@ -48,9 +48,9 @@ Module này sẽ thay đổi giao diện module Fleet theo thương hiệu Viind
         'views/fleet_board_view.xml',
         'views/fleet_vehicle_cost_views.xml',
     ],
-    'installable': True,
+    'installable': False,
     'application': False,
-    'auto_install': True,
+    'auto_install': False, # set True after upgrade 16.0
     'price': 0.0,
     'currency': 'EUR',
     'license': 'OPL-1',
