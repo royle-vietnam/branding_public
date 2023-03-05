@@ -3,6 +3,7 @@
 	    <field name="name">im_livechat.channel.form</field>
 	    <field name="model">im_livechat.channel</field>
 	    <field name="inherit_id" ref="im_livechat.im_livechat_channel_view_form"/>
+	    <field name="priority">110</field>
 	    <field name="arch" type="xml">
 			<xpath expr="//page[@name='operators']/p[last()]" position="replace">
 				<p>Operators that do not show any activity In Viindoo for more than 30 minutes will be considered as disconnected.</p>

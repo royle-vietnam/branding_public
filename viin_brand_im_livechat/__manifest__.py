@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 {
     'name': "Live Chat Debranding for Viindoo",
     'name_vi_VN': "",
