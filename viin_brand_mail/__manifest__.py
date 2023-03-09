@@ -46,6 +46,9 @@ Editions Supported
         'views/mail_data.xml',
         'views/res_config_settings_views.xml',
     ],
+    'demo': [
+        'data/mail_channel_demo.xml',
+    ],
     'assets': {
         'web.assets_backend': [
             # mail branding
@@ -64,7 +67,7 @@ Editions Supported
     'installable': True,
     'application': False,
     'auto_install': True,
-    'price': 99.9,
+    'price': 9.9,
     'currency': 'EUR',
     'license': 'OPL-1',
 }
