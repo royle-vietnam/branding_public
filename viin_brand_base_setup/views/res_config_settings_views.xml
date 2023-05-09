@@ -10,11 +10,11 @@
             </xpath>
             <xpath expr="//a[@href='https://www.odoo.com/documentation/16.0/applications/general/auth/ldap.html']" position="attributes">
                 <attribute name="href">https://viindoo.com/documentation/15.0/applications/getting-started/external-apps-integration/ldap.html?highlight=ldap</attribute>
-            </xpath>            
-            <xpath expr="//a[@href='https://www.odoo.com/documentation/16.0/applications/general/calendars/outlook/outlook_calendar.html']" position="attributes">
+            </xpath>
+            <xpath expr="//div[./label[@for='module_microsoft_calendar']]/a" position="attributes">
                 <attribute name="href">https://viindoo.com/documentation/15.0/applications/productivity/calendar/sychronization-with-outlook-s-calendar.html</attribute>
             </xpath>
-            <xpath expr="//a[@href='https://www.odoo.com/documentation/16.0/applications/general/calendars/google/google_calendar_credentials.html']" position="attributes">
+            <xpath expr="//div[./label[@for='module_google_calendar']]/a" position="attributes">
                 <attribute name="href">https://viindoo.com/documentation/15.0/applications/productivity/calendar/sychronization-with-google-s-calendar.html</attribute>
             </xpath>
             <xpath expr="//a[@href='https://www.odoo.com/documentation/16.0/applications/websites/website/optimize/unsplash.html']" position="attributes">
