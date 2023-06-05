@@ -17,6 +17,8 @@
   --danger: #CC5252 !important;
   --light: #F6F7FA !important;
   --dark: #323232 !important;
+  --o-cc1-btn-secondary: #7f4282 !important;
+  --o-cc1-btn-secondary-border: #7f4282 !important;
 }
 // All of those are BS default
 $white:    #fff !default;
@@ -95,8 +97,8 @@ $caret-width: 4px !default;
 //
 // Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif: o-add-unicode-support-font(("Lucida Grande", Helvetica, Verdana, Arial, sans-serif), 1) !default;
-
+//$font-family-sans-serif: o-add-unicode-support-font(("Lucida Grande", Helvetica, Verdana, Arial, sans-serif), 1) !default;
+$btn-font-weight: 500 !default;
 $font-size-base: $o-font-size-base !default;
 $line-height-base: $o-line-height-base !default;
 
