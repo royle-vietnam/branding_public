@@ -11,19 +11,6 @@
 
 }
 
-.o_web_client {
-	.o_searchview_input {
-		border: 0;
-		border-radius: 0;
-		border-bottom: 1px solid $white;
-		&:focus, &:hover {
-			outline: none;
-			border: 0;
-			border-bottom: 1px solid $brand-primary !important;
-		}
-	}
-}
-
 .dropdown-item:focus{
 	background-color: transparent;
 }
