@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="account_tour_upload_bill"
+        inherit_id="account.account_tour_upload_bill">
+        <xpath expr="//h2[text()[contains(., 'Odoo')]]" position="replace">
+            <h2>With Viindoo, you won't have to record bills manually</h2>
+        </xpath>
+    </template>
+</odoo>
