@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-inherit="snailmail.SnailmailError" >
+       <xpath expr="//a[@href='https://www.odoo.com/help']" position="replace">
+         <a href="https://viindoo.com/vi/contactus" target="new">support</a>
+       </xpath>
+    </t>
+</templates>
