@@ -1,3 +1,14 @@
 .rounded {
 	border-radius: 0.25rem !important;
 }
+.btn-primary,
+.btn-secondary:not(.dropdown-toggle):not(.dropdown-item),
+.btn-secondary.o_arrow_button:not(.dropdown-item) {
+  text-transform: inherit;
+}
+//== Badges
+.badge {
+    &.text-bg-default, &.bg-light, &.text-bg-light, &.bg-default, &.text-primary{
+        outline: 1px solid $o-enterprise-color;
+    }
+}

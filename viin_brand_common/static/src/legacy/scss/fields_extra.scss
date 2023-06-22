@@ -2,10 +2,17 @@
 //------------------------------------------------------------------------------
 // Fields
 //------------------------------------------------------------------------------
-.o_field_widget:focus-within{
-	&.o_input,
-	.o_input{
-		border-bottom: 1px solid $brand-primary;
+.o_field_widget{
+	:focus-within{
+		&.o_input,
+		.o_input{
+			border-bottom: 1px solid $brand-primary;
+		}
+	}
+	&.o_field_many2one {
+		.o_external_button {
+			color: $o-enterprise-primary-color;
+		}
 	}
 }
 

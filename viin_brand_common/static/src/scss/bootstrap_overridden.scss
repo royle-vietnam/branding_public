@@ -28,7 +28,7 @@ $gray-300: #dee2e6 !default;
 $gray-400: #ced4da !default;
 $gray-500: #adb5bd !default;
 $gray-600: #6c757d !default;
-$gray-700: #495057 !default;
+$gray-700: #495057 !default; 
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
 $black:    #000 !default;
@@ -96,9 +96,8 @@ $caret-width: 4px !default;
 // Fonts
 //
 // Font, line-height, and color for body text, headings, and more.
-
-//$font-family-sans-serif: o-add-unicode-support-font(("Lucida Grande", Helvetica, Verdana, Arial, sans-serif), 1) !default;
-$btn-font-weight: 500 !default;
+ 
+$font-family-sans-serif: o-add-unicode-support-font((Roboto, "Lucida Grande", Helvetica, Verdana, Arial, sans-serif), 1) !default;
 $font-size-base: $o-font-size-base !default;
 $line-height-base: $o-line-height-base !default;
 
