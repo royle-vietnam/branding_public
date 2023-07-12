@@ -20,6 +20,9 @@
             <xpath expr="//div[./label[@for='module_web_unsplash']]/a" position="attributes">
                 <attribute name="href">https://viindoo.com/documentation/15.0/applications/websites/website/optimize/how-to-intergrate-with-free-image-library-at-unsplash.html</attribute>
             </xpath>
+            <xpath expr="//div[@id='sms']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
         </field>
     </record>
 </odoo>
