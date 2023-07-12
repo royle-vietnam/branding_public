@@ -5,11 +5,8 @@
         <field name="model">product.product</field>
         <field name="inherit_id" ref="product.product_variant_easy_edit_view" />
         <field name="arch" type="xml">
-            <xpath expr="//h1" position="replace">
-                <h1>
-                    <field name="name" readonly="1"
-                        placeholder="e.g. Viindoo Enterprise Subscription" />
-                </h1>
+            <xpath expr="//h1/field[@name='name']" position="attributes">
+                <attribute name="placeholder">e.g. Viindoo Subscription</attribute>
             </xpath>
         </field>
     </record>
