@@ -2,6 +2,10 @@
 	&.o-offline {
         color: $gray-500 !important;
     }
+
+   	&.text-primary {
+        color: $brand-primary !important; 
+    }
 }
 .o_PartnerImStatusIcon_icon {
     &.o-bot {
