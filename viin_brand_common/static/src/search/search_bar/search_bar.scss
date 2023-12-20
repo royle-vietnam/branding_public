@@ -1,0 +1,11 @@
+// = Search Bar
+// ============================================================================
+
+.o_searchview_facet {
+	.o_facet_values {
+        border: $border-width solid var(--SearchBar-facet-background, #{$brand-primary-dark});
+    }
+    .o_searchview_facet_label {
+        background: var(--SearchBar-facet-background, #{$brand-primary-dark});
+    }
+}
