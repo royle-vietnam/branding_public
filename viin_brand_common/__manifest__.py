@@ -49,6 +49,9 @@ Mô đun này thay đổi một vài thông tin dành riêng cho thương hiệu
         'web._assets_primary_variables': [
             ('before', 'web/static/src/scss/primary_variables.scss', 'viin_brand_common/static/src/scss/primary_variables.scss'),
         ],
+        'web._assets_bootstrap': [
+            ('after', 'web/static/src/scss/helpers_backport.scss', 'viin_brand_common/static/src/scss/helpers_backport.scss'),
+            ],
         'web._assets_secondary_variables': [
             ('prepend', 'viin_brand_common/static/src/legacy/scss/secondary_variables.scss'),
         ],
@@ -56,7 +59,7 @@ Mô đun này thay đổi một vài thông tin dành riêng cho thương hiệu
             ('after', 'web/static/src/scss/bootstrap_overridden.scss', 'viin_brand_common/static/src/scss/bootstrap_overridden.scss'),
         ],
         'web._assets_helpers': [
-            'viin_brand_common/static/src/legacy/scss/bootstrap_overridden_common.scss'
+            'viin_brand_common/static/src/legacy/scss/bootstrap_overridden_common.scss',
         ],
         'web.assets_common': [
             'viin_brand_common/static/src/legacy/scss/navbar.scss',
