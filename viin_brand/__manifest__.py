@@ -40,9 +40,9 @@ Mô đun này thay đổi một vài thông tin dành riêng cho thương hiệu
     'depends': ['base'],
     'data': [
     ],
-    'installable': True,
+    'installable': False,
     'application': False,
-    'auto_install': True,
+    'auto_install': False, # set True after upgrading for v17
     'price': 9.9,
     'currency': 'EUR',
     'license': 'OPL-1',

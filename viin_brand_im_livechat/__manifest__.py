@@ -52,9 +52,9 @@ Editions Supported
     'images': [
         # 'static/description/main_screenshot.png'
         ],
-    'installable': True,
+    'installable': False,
     'application': False,
-    'auto_install': True,
+    'auto_install': False, # set True after upgrading for v17
     'price': 0.0,
     'currency': 'EUR',
     'license': 'OPL-1',

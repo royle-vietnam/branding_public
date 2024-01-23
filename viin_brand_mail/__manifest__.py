@@ -66,9 +66,9 @@ Editions Supported
             ('after', 'mail/static/src/components/thread_view_topbar/thread_view_topbar.scss', 'viin_brand_mail/static/src/components/thread_view_topbar/thread_view_topbar.scss'),
         ],
     },
-    'installable': True,
+    'installable': False,
     'application': False,
-    'auto_install': True,
+    'auto_install': False, # set True after upgrading for v17
     'price': 9.9,
     'currency': 'EUR',
     'license': 'OPL-1',

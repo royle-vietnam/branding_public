@@ -53,9 +53,9 @@ Editions Supported
     'images': [
         # 'static/description/main_screenshot.png'
         ],
-    'installable': True,
+    'installable': False,
     'application': False,
-    'auto_install': ['website_slides'],
+    'auto_install': False,  # set ['website_slides'] after upgrading to v17
     'price': 0.0,
     'currency': 'EUR',
     'license': 'OPL-1',

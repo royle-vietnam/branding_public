@@ -54,9 +54,9 @@ Module này sẽ thay đổi giao diện các module Product theo thương hiệ
         'views/res_config_settings_views.xml',
         'views/product_views.xml',
     ],
-    'installable': True,
+    'installable': False,
     'application': False,
-    'auto_install': True,
+    'auto_install': False, # set True after upgrading for v17
     'price': 0.0,
     'currency': 'EUR',
     'license': 'OPL-1',
