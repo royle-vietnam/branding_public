@@ -6,28 +6,29 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-07 02:11+0000\n"
-"PO-Revision-Date: 2023-10-07 02:11+0000\n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"PO-Revision-Date: 2023-11-27 11:33+0000\n"
+"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
+"Language-Team: none\n"
+"Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.17\n"
 
 #. module: web_responsive
 #. odoo-javascript
 #: code:addons/web_responsive/static/src/components/chatter_topbar/chatter_topbar.xml:0
 #, python-format
 msgid "Activities"
-msgstr "Hoạt động"
+msgstr "Attività"
 
 #. module: web_responsive
 #. odoo-javascript
 #: code:addons/web_responsive/static/src/components/search_panel/search_panel.xml:0
 #, python-format
 msgid "All"
-msgstr "Tất cả"
+msgstr "Tutte"
 
 #. module: web_responsive
 #. odoo-javascript
@@ -37,7 +38,7 @@ msgstr "Tất cả"
 #: code:addons/web_responsive/static/src/components/chatter_topbar/chatter_topbar.xml:0
 #, python-format
 msgid "Attachment counter loading..."
-msgstr "Đang nạp bộ đếm đính kèm..."
+msgstr "Caricamento contatore allegati..."
 
 #. module: web_responsive
 #. odoo-javascript
@@ -47,7 +48,7 @@ msgstr "Đang nạp bộ đếm đính kèm..."
 #: code:addons/web_responsive/static/src/components/chatter_topbar/chatter_topbar.xml:0
 #, python-format
 msgid "Attachments"
-msgstr "Đính kèm"
+msgstr "Allegati"
 
 #. module: web_responsive
 #. odoo-javascript
@@ -55,7 +56,7 @@ msgstr "Đính kèm"
 #: code:addons/web_responsive/static/src/components/control_panel/control_panel.xml:0
 #, python-format
 msgid "CLEAR"
-msgstr ""
+msgstr "CANCELLA"
 
 #. module: web_responsive
 #. odoo-javascript
@@ -63,7 +64,7 @@ msgstr ""
 #: code:addons/web_responsive/static/src/legacy/xml/form_buttons.xml:0
 #, python-format
 msgid "Discard"
-msgstr "Bỏ"
+msgstr "Abbandona"
 
 #. module: web_responsive
 #. odoo-javascript
@@ -72,21 +73,21 @@ msgstr "Bỏ"
 #: code:addons/web_responsive/static/src/components/search_panel/search_panel.xml:0
 #, python-format
 msgid "FILTER"
-msgstr ""
+msgstr "FILTRA"
 
 #. module: web_responsive
 #. odoo-javascript
 #: code:addons/web_responsive/static/src/components/apps_menu/apps_menu.xml:0
 #, python-format
 msgid "Home Menu"
-msgstr "Menu Chính"
+msgstr "Menu home"
 
 #. module: web_responsive
 #. odoo-javascript
 #: code:addons/web_responsive/static/src/components/chatter_topbar/chatter_topbar.xml:0
 #, python-format
 msgid "Log note"
-msgstr "Ghi chú nội bộ"
+msgstr "Registra nota"
 
 #. module: web_responsive
 #. odoo-javascript
@@ -94,7 +95,7 @@ msgstr "Ghi chú nội bộ"
 #: code:addons/web_responsive/static/src/components/attachment_viewer/attachment_viewer.xml:0
 #, python-format
 msgid "Maximize"
-msgstr ""
+msgstr "Massimizza"
 
 #. module: web_responsive
 #. odoo-javascript
@@ -102,7 +103,7 @@ msgstr ""
 #: code:addons/web_responsive/static/src/components/attachment_viewer/attachment_viewer.xml:0
 #, python-format
 msgid "Minimize"
-msgstr "Tối đa"
+msgstr "Minimizza"
 
 #. module: web_responsive
 #. odoo-javascript
@@ -110,7 +111,7 @@ msgstr "Tối đa"
 #: code:addons/web_responsive/static/src/legacy/xml/form_buttons.xml:0
 #, python-format
 msgid "New"
-msgstr "Mới"
+msgstr "Nuovo"
 
 #. module: web_responsive
 #. odoo-javascript
@@ -119,7 +120,7 @@ msgstr "Mới"
 #: code:addons/web_responsive/static/src/components/search_panel/search_panel.xml:0
 #, python-format
 msgid "SEE RESULT"
-msgstr ""
+msgstr "VEDI RISULTATO"
 
 #. module: web_responsive
 #. odoo-javascript
@@ -127,14 +128,14 @@ msgstr ""
 #: code:addons/web_responsive/static/src/legacy/xml/form_buttons.xml:0
 #, python-format
 msgid "Save"
-msgstr "Lưu"
+msgstr "Salva"
 
 #. module: web_responsive
 #. odoo-javascript
 #: code:addons/web_responsive/static/src/components/apps_menu/apps_menu.xml:0
 #, python-format
 msgid "Search menus..."
-msgstr "Tìm menu..."
+msgstr "Ricerca menù..."
 
 #. module: web_responsive
 #. odoo-javascript
@@ -142,18 +143,18 @@ msgstr "Tìm menu..."
 #: code:addons/web_responsive/static/src/components/control_panel/control_panel.xml:0
 #, python-format
 msgid "Search..."
-msgstr "Tìm kiếm..."
+msgstr "Cerca..."
 
 #. module: web_responsive
 #. odoo-javascript
 #: code:addons/web_responsive/static/src/components/chatter_topbar/chatter_topbar.xml:0
 #, python-format
 msgid "Send message"
-msgstr "Gửi tin"
+msgstr "Invia messaggio"
 
 #. module: web_responsive
 #. odoo-javascript
 #: code:addons/web_responsive/static/src/components/control_panel/control_panel.xml:0
 #, python-format
 msgid "View switcher"
-msgstr ""
+msgstr "Selettore vista"
