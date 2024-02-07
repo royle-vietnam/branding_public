@@ -15,9 +15,10 @@
     "Odoo Community Association (OCA)",
     "license": "LGPL-3",
     "installable": False,
+    'auto_install': False, # Set True after upgrading for v17
     "depends": ["web", "mail"],
     "development_status": "Production/Stable",
-    "maintainers": ["Yajo", "Tardo", "SplashS"],
+    "maintainers": ["Tardo", "SplashS"],
     "excludes": ["web_enterprise"],
     "data": ["views/web.xml"],
     "assets": {
@@ -28,9 +29,6 @@
             "/web_responsive/static/src/components/ui_context.esm.js",
             "/web_responsive/static/src/components/apps_menu/apps_menu.scss",
             "/web_responsive/static/src/components/apps_menu/apps_menu.esm.js",
-            "/web_responsive/static/src/components/apps_menu/apps_menu_service.js",
-            "/web_responsive/static/src/components/navbar/navbar.js",
-            "/web_responsive/static/src/components/webclient.js",
             "/web_responsive/static/src/components/control_panel/control_panel.scss",
             "/web_responsive/static/src/components/control_panel/control_panel.esm.js",
             "/web_responsive/static/src/components/search_panel/search_panel.scss",
