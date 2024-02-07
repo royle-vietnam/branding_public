@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-10 10:49+0000\n"
-"PO-Revision-Date: 2023-09-20 17:50+0000\n"
-"Last-Translator: kikopeiro <francisco.peiro@factorlibre.com>\n"
+"PO-Revision-Date: 2024-02-06 19:37+0000\n"
+"Last-Translator: Ivorra78 <informatica@totmaterial.es>\n"
 "Language-Team: Spanish (https://www.transifex.com/oca/teams/23907/es/)\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
@@ -21,38 +21,51 @@ msgstr ""
 
 #. module: web_responsive
 #. odoo-javascript
-#: code:addons/web_responsive/static/src/components/chatter_topbar/chatter_topbar.xml:0
+#: code:addons/web_responsive/static/src/views/form/status_bar_buttons.xml:0
 #, python-format
-msgid "Activities"
-msgstr "Actividades"
+msgid "Action"
+msgstr "Acción"
 
 #. module: web_responsive
 #. odoo-javascript
-#: code:addons/web_responsive/static/src/components/search_panel/search_panel.xml:0
+#: code:addons/web_responsive/static/src/components/menu_canonical_searchbar/searchbar.xml:0
 #, python-format
-msgid "All"
-msgstr "Todos"
+msgid "App Icon"
+msgstr "Icono de la Aplicación"
 
 #. module: web_responsive
-#. odoo-javascript
-#: code:addons/web_responsive/static/src/components/chatter_topbar/chatter_topbar.xml:0
-#, python-format
-msgid "Attachment counter loading..."
-msgstr "Carga del contador de archivos adjuntos..."
+#: model:ir.actions.act_window,name:web_responsive.res_users_view_form_apps_menu_preferences_action
+msgid "Apps Menu Preferences"
+msgstr "Preferencias del Menú Aplicaciones"
 
 #. module: web_responsive
-#. odoo-javascript
-#: code:addons/web_responsive/static/src/components/chatter_topbar/chatter_topbar.xml:0
-#, python-format
-msgid "Attachments"
-msgstr "Archivos adjuntos"
+#: model:ir.model.fields,field_description:web_responsive.field_res_users__apps_menu_search_type
+#: model_terms:ir.ui.view,arch_db:web_responsive.res_users_view_form_apps_menu_preferences
+msgid "Apps Menu Search Type"
+msgstr "Menú Aplicaciones Tipo de Búsqueda"
 
 #. module: web_responsive
-#. odoo-javascript
-#: code:addons/web_responsive/static/src/components/control_panel/control_panel.xml:0
-#, python-format
-msgid "CLEAR"
-msgstr "LIMPIAR"
+#: model:ir.model.fields,field_description:web_responsive.field_res_users__apps_menu_theme
+#: model_terms:ir.ui.view,arch_db:web_responsive.res_users_view_form_apps_menu_preferences
+msgid "Apps Menu Theme"
+msgstr "Tema del Menú de Aplicaciones"
+
+#. module: web_responsive
+#: model:ir.model.fields.selection,name:web_responsive.selection__res_users__apps_menu_search_type__canonical
+#: model_terms:ir.ui.view,arch_db:web_responsive.res_users_view_form_apps_menu_preferences
+msgid "Canonical"
+msgstr "Canónico"
+
+#. module: web_responsive
+#: model:ir.model.fields.selection,name:web_responsive.selection__res_users__apps_menu_search_type__command_palette
+#: model_terms:ir.ui.view,arch_db:web_responsive.res_users_view_form_apps_menu_preferences
+msgid "Command Palette"
+msgstr "Paleta de Comandos"
+
+#. module: web_responsive
+#: model:ir.model.fields.selection,name:web_responsive.selection__res_users__apps_menu_theme__community
+msgid "Community"
+msgstr "Comunidad"
 
 #. module: web_responsive
 #. odoo-javascript
@@ -63,11 +76,21 @@ msgstr "Descartar"
 
 #. module: web_responsive
 #. odoo-javascript
-#: code:addons/web_responsive/static/src/components/control_panel/control_panel.xml:0
-#: code:addons/web_responsive/static/src/components/search_panel/search_panel.xml:0
+#: code:addons/web_responsive/static/src/components/command_palette/main.xml:0
 #, python-format
-msgid "FILTER"
-msgstr "FILTRAR"
+msgid "Exit"
+msgstr "Salida"
+
+#. module: web_responsive
+#: model:ir.model.fields.selection,name:web_responsive.selection__res_users__apps_menu_search_type__fuse
+#: model_terms:ir.ui.view,arch_db:web_responsive.res_users_view_form_apps_menu_preferences
+msgid "Fuse"
+msgstr "Fusible"
+
+#. module: web_responsive
+#: model:ir.model,name:web_responsive.model_ir_http
+msgid "HTTP Routing"
+msgstr "Enrutamiento HTTP"
 
 #. module: web_responsive
 #. odoo-javascript
@@ -78,21 +101,26 @@ msgstr "Menú de Inicio"
 
 #. module: web_responsive
 #. odoo-javascript
-#: code:addons/web_responsive/static/src/components/chatter_topbar/chatter_topbar.xml:0
+#: code:addons/web_responsive/static/src/components/chatter/chatter.xml:0
 #, python-format
 msgid "Log note"
 msgstr "Nota de registro"
 
 #. module: web_responsive
 #. odoo-javascript
-#: code:addons/web_responsive/static/src/components/attachment_viewer/attachment_viewer.xml:0
+#: code:addons/web_responsive/static/src/components/file_viewer/file_viewer.xml:0
 #, python-format
 msgid "Maximize"
 msgstr "Maximizar"
 
 #. module: web_responsive
+#: model:ir.model.fields.selection,name:web_responsive.selection__res_users__apps_menu_theme__milk
+msgid "Milk"
+msgstr "Leche"
+
+#. module: web_responsive
 #. odoo-javascript
-#: code:addons/web_responsive/static/src/components/attachment_viewer/attachment_viewer.xml:0
+#: code:addons/web_responsive/static/src/components/file_viewer/file_viewer.xml:0
 #, python-format
 msgid "Minimize"
 msgstr "Minimizar"
@@ -106,11 +134,10 @@ msgstr "Nuevo"
 
 #. module: web_responsive
 #. odoo-javascript
-#: code:addons/web_responsive/static/src/components/control_panel/control_panel.xml:0
-#: code:addons/web_responsive/static/src/components/search_panel/search_panel.xml:0
+#: code:addons/web_responsive/static/src/components/menu_canonical_searchbar/searchbar.xml:0
 #, python-format
-msgid "SEE RESULT"
-msgstr "VER RESULTADO"
+msgid "Nothing to show"
+msgstr "Nada que mostrar"
 
 #. module: web_responsive
 #. odoo-javascript
@@ -120,32 +147,90 @@ msgid "Save"
 msgstr "Guardar"
 
 #. module: web_responsive
+#: model_terms:ir.ui.view,arch_db:web_responsive.res_users_view_form_apps_menu_preferences
+msgid "Search Type"
+msgstr "Tipo de Búsqueda"
+
+#. module: web_responsive
+#: model_terms:ir.ui.view,arch_db:web_responsive.res_users_view_form_apps_menu_preferences
+msgid "Search Type Help"
+msgstr "Tipo de Búsqueda Ayuda"
+
+#. module: web_responsive
 #. odoo-javascript
-#: code:addons/web_responsive/static/src/components/apps_menu/apps_menu.xml:0
+#: code:addons/web_responsive/static/src/components/menu_canonical_searchbar/searchbar.xml:0
+#: code:addons/web_responsive/static/src/components/menu_odoo_searchbar/searchbar.xml:0
 #, python-format
 msgid "Search menus..."
 msgstr "Buscar menús..."
 
 #. module: web_responsive
 #. odoo-javascript
-#: code:addons/web_responsive/static/src/components/control_panel/control_panel.xml:0
-#, python-format
-msgid "Search..."
-msgstr "Búsqueda..."
-
-#. module: web_responsive
-#. odoo-javascript
-#: code:addons/web_responsive/static/src/components/chatter_topbar/chatter_topbar.xml:0
+#: code:addons/web_responsive/static/src/components/chatter/chatter.xml:0
 #, python-format
 msgid "Send message"
 msgstr "Enviar mensaje"
 
 #. module: web_responsive
-#. odoo-javascript
-#: code:addons/web_responsive/static/src/components/control_panel/control_panel.xml:0
+#: model_terms:ir.ui.view,arch_db:web_responsive.res_users_view_form_apps_menu_preferences
+msgid "Theme"
+msgstr "Tema"
+
+#. module: web_responsive
+#: model:ir.model,name:web_responsive.model_res_users
+msgid "User"
+msgstr "Usuario"
+
+#. module: web_responsive
+#: model_terms:ir.ui.view,arch_db:web_responsive.res_users_view_form_apps_menu_preferences
+msgid "a new search algorithm is used"
+msgstr "se utiliza un nuevo algoritmo de búsqueda"
+
+#. module: web_responsive
+#: model_terms:ir.ui.view,arch_db:web_responsive.res_users_view_form_apps_menu_preferences
+msgid "the standard odoo search tool"
+msgstr "la herramienta de búsqueda estándar de odoo"
+
+#. module: web_responsive
+#: model_terms:ir.ui.view,arch_db:web_responsive.res_users_view_form_apps_menu_preferences
+msgid "uses a standard algorithm"
+msgstr "utiliza un algoritmo estándar"
+
 #, python-format
-msgid "View switcher"
-msgstr "Vista del conmutador"
+#~ msgid "Activities"
+#~ msgstr "Actividades"
+
+#, python-format
+#~ msgid "All"
+#~ msgstr "Todos"
+
+#, python-format
+#~ msgid "Attachment counter loading..."
+#~ msgstr "Carga del contador de archivos adjuntos..."
+
+#, python-format
+#~ msgid "Attachments"
+#~ msgstr "Archivos adjuntos"
+
+#, python-format
+#~ msgid "CLEAR"
+#~ msgstr "LIMPIAR"
+
+#, python-format
+#~ msgid "FILTER"
+#~ msgstr "FILTRAR"
+
+#, python-format
+#~ msgid "SEE RESULT"
+#~ msgstr "VER RESULTADO"
+
+#, python-format
+#~ msgid "Search..."
+#~ msgstr "Búsqueda..."
+
+#, python-format
+#~ msgid "View switcher"
+#~ msgstr "Vista del conmutador"
 
 #, python-format
 #~ msgid "Create"
