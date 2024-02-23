@@ -16,4 +16,5 @@
             "/web_chatter_position/static/src/**/*.js",
         ],
     },
+    "installable": False,
 }
