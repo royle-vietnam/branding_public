@@ -53,6 +53,11 @@ Module này sẽ thay đổi giao diện cuả Unsplash Image Library theo thư�
     'data': [
         'views/res_config_settings_view.xml',
     ],
+    'assets': {
+        'web_editor.assets_media_dialog': [
+            'viin_brand_web_unsplash/static/src/components/media_dialog/*.xml',
+        ],
+    },
     'installable': True,
     'application': False,
     'auto_install': True,
