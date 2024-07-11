@@ -49,9 +49,7 @@ Editions Supported
         'views/im_livechat_channel_templates.xml',
         'views/im_livechat_channel_views.xml'
     ],
-    'images': [
-        # 'static/description/main_screenshot.png'
-        ],
+    'post_init_hook': 'post_init_hook',
     'installable': False, # set auto_install True after upgrading for v17 after upgrading for v17
     'price': 0.0,
     'currency': 'EUR',
