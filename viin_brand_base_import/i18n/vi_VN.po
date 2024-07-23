@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 16.0\n"
+"Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-10 06:49+0000\n"
-"PO-Revision-Date: 2023-02-10 06:49+0000\n"
+"POT-Creation-Date: 2025-03-03 04:40+0000\n"
+"PO-Revision-Date: 2025-03-03 04:40+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -17,29 +17,22 @@ msgstr ""
 
 #. module: viin_brand_base_import
 #. odoo-javascript
-#: code:addons/viin_brand_base_import/static/src/xml/base_import.xml:0
-#, python-format
-msgid "File Column"
-msgstr "Cột tệp"
-
-#. module: viin_brand_base_import
-#. odoo-javascript
-#: code:addons/viin_brand_base_import/static/src/xml/base_import.xml:0
+#: code:addons/viin_brand_base_import/static/src/import_data_content/import_data_content.xml:0
 #, python-format
 msgid ""
 "If the file contains\n"
-"                the column names, the system can try auto-detecting the\n"
-"                field corresponding to the column. This makes imports\n"
-"                simpler especially when the file has many columns."
+"            the column names, the System can try auto-detecting the\n"
+"            field corresponding to the column. This makes imports\n"
+"            simpler especially when the file has many columns."
 msgstr ""
-"Nếu tệp có chứa\n"
-"                    tên cột, hệ thống có thể tự động nhận diện\n"
-"                    trường tương ứng với cột. Việc này giúp nhập liệu\n"
-"                    dễ dàng hơn khi tệp có nhiều cột."
+"Nếu tệp chứa\n"
+"            tên các cột, hệ thống có thể cố gắng tự động nhận diện các\n"
+"            trường tương ứng với các cột. Điều này làm cho việc nhập dữ liệu\n"
+"            trở nên đơn giản hơn, đặc biệt khi tệp có nhiều cột."
 
 #. module: viin_brand_base_import
 #. odoo-javascript
-#: code:addons/viin_brand_base_import/static/src/xml/base_import.xml:0
+#: code:addons/viin_brand_base_import/static/src/import_data_content/import_data_content.xml:0
 #, python-format
 msgid "System Field"
 msgstr "Trường hệ thống"
