@@ -55,10 +55,11 @@ Module này sẽ thay đổi giao diện module Initial Setup Tools theo thươn
     ],
     'assets': {
         'web.assets_backend': [
-            'viin_brand_base_setup/static/src/webclient/**/*',
+            'viin_brand_base_setup/static/src/webclient/settings_form_view/widgets/res_config_edition.xml',
         ],
     },
-    'installable': False, # set auto_install True after upgrading for v17 after upgrading for v17
+    'installable': True,
+    'auto_install': True,
     'price': 0.0,
     'currency': 'EUR',
     'license': 'OPL-1',
