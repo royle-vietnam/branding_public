@@ -5,7 +5,7 @@
 
 :root {
     .o_grid_apps_menu[data-theme="milk"] {
-        --app-menu-text-color: #{$app-menu-text-color};
+        --app-menu-text-color: #374151;
         --app-menu-text-shadow: 1px 1px 1px #{rgba($white, 0.4)};
         --app-menu-hover-background: #{rgba(white, 0.4)};
     }
@@ -60,7 +60,7 @@
         bottom: 2px;
         right: 2px;
         text-shadow: 0 0 2px rgba(250, 250, 250, 0.6);
-        color: $app-menu-text-color;
+        color: $brand-secondary;
     }
 
     &:focus,

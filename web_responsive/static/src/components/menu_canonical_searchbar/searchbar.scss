@@ -5,11 +5,13 @@
 
 :root {
     .o_grid_apps_menu[data-theme="milk"] {
-        --apps-menu-scrollbar-background: #{$o-brand-odoo};
-        --apps-menu-empty-search-color: $app-menu-text-color;
+        --app-menu-text-color: #374151;
+        --apps-menu-scrollbar-background: #374151;
+        --apps-menu-empty-search-color: #374151;
     }
 
     .o_grid_apps_menu[data-theme="community"] {
+        --app-menu-text-color: white;
         --apps-menu-scrollbar-background: white;
         --apps-menu-empty-search-color: white;
     }
@@ -76,8 +78,8 @@
         }
 
         &__name {
-            color: $app-menu-text-color;
-            text-shadow: 0 0 $app-menu-text-color;
+            color: var(--app-menu-text-color);
+            text-shadow: 0 0 var(--app-menu-text-color);
         }
 
         &__image {
