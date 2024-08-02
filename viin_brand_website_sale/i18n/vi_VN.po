@@ -17,10 +17,10 @@ msgstr ""
 
 #. module: viin_brand_website_sale
 #: model_terms:ir.ui.view,arch_db:viin_brand_website_sale.brand_promotion
-msgid "#1 Open Source eCommerce Software"
+msgid "The #1 Open Source eCommerce Software"
 msgstr "Phần mềm Thương mại Điện tử Mã nguồn mở số 1"
 
 #. module: viin_brand_website_sale
 #: model_terms:ir.ui.view,arch_db:viin_brand_website_sale.brand_promotion
-msgid "The"
-msgstr " "
+msgid "https://viindoo.com/intro/ecommerce?utm_source=db&utm_medium=website"
+msgstr "https://viindoo.com/intro/ecommerce?utm_source=db&utm_medium=website"
