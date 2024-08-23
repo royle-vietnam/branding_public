@@ -23,4 +23,4 @@ msgstr "Phần mềm Thương mại Điện tử Mã nguồn mở số 1"
 #. module: viin_brand_website_sale
 #: model_terms:ir.ui.view,arch_db:viin_brand_website_sale.brand_promotion
 msgid "https://viindoo.com/intro/ecommerce?utm_source=db&utm_medium=website"
-msgstr ""
+msgstr "https://viindoo.com/intro/ecommerce?utm_source=db&utm_medium=website"
