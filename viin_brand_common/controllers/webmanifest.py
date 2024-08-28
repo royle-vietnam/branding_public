@@ -22,7 +22,7 @@ class BrandWebManifest(WebManifest):
 
         json_response['theme_color'] = '#00bbce'
         json_response['background_color'] = '#00bbce'
-        json_response['name'] = 'Viindoo'
+        json_response['name'] = self._viindoo_app_name()
 
         icon_sizes = ['192x192', '512x512']
         invalid_sizes = [item['sizes'] for item in json_response.get('icons', []) if item['sizes'] not in icon_sizes]
@@ -42,6 +42,9 @@ class BrandWebManifest(WebManifest):
         ])
 
         return new_response
+
+    def _viindoo_app_name(self):
+        return 'Viindoo'
 
     def _viindoo_icon_path(self, size='192x192'):
         return 'viin_brand_common/static/img/viindoo-icon-%s.png' % size
