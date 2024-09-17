@@ -20,7 +20,7 @@ msgstr ""
 #: code:addons/viin_brand_base_setup/static/src/webclient/settings_form_view/widgets/res_config_edition.xml:0
 #, python-format
 msgid "Copyright © 2019"
-msgstr ""
+msgstr "Bản quyền © 2019"
 
 #. module: viin_brand_base_setup
 #. odoo-javascript
