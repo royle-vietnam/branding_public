@@ -17,15 +17,15 @@ msgstr ""
 #. module: mrp
 #: model_terms:digest.tip,tip_description:mrp.digest_tip_mrp_0
 msgid ""
-"With the system work center control panel, your worker can start work orders"
-" in the shop and follow instructions of the worksheet. Quality tests are "
+"With the system work center control panel, your worker can start work orders "
+"in the shop and follow instructions of the worksheet. Quality tests are "
 "perfectly integrated into the process. Workers can trigger feedback loops, "
 "maintenance alerts, scrap products, etc."
 msgstr ""
 "Với bảng điều khiển trung tâm, công nhân có thể bắt đầu lệnh sản xuất "
 "tại xưởng và làm theo hướng dẫn của bảng công việc. Việc kiểm thử chất lượng "
 "đã được tích hợp hoàn hảo vào quá trình này. Công nhân có thể kích hoạt chu trình "
-"phản hồi, cảnh báo bảo trì, phế phẩm, v.v... "
+"phản hồi, cảnh báo bảo trì, phế phẩm, v.v..."
 
 #. module: mrp
 #: model:digest.tip,name:mrp.digest_tip_mrp_0

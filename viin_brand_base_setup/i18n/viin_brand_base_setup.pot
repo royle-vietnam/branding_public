@@ -42,17 +42,3 @@ msgstr ""
 #, python-format
 msgid "Viindoo."
 msgstr ""
-
-#. module: viin_brand_base_setup
-#. openerp-web
-#: code:addons/viin_brand_base_setup/static/src/xml/res_config_edition.xml:0
-#, python-format
-msgid "Viindoo"
-msgstr ""
-
-#. module: viin_brand_base_setup
-#. openerp-web
-#: code:addons/viin_brand_base_setup/static/src/xml/res_config_edition.xml:0
-#, python-format
-msgid "Viindoo."
-msgstr ""
