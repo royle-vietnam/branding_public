@@ -66,7 +66,7 @@ msgid ""
 msgstr ""
 "Theo dõi khách truy cập của bạn khi họ đang duyệt trang web của bạn bằng ứng"
 " dụng Viindoo Social. Tương tác với họ chỉ với một cú nhấp chuột bằng cách sử "
-"dụng yêu cầu trò chuyện trực tiếp hoặc thông báo đẩy. Nếu họ đã hoàn thành "
+"dụng yêu cầu trò chuyện trực tuyến hoặc thông báo đẩy. Nếu họ đã hoàn thành "
 "một trong các biểu mẫu của bạn, bạn có thể gửi SMS cho họ hoặc gọi cho họ "
 "ngay trong khi họ đang duyệt trang web của bạn."
 
