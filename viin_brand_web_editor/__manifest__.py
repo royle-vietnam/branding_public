@@ -29,13 +29,7 @@ Editions Supported
     'version': '0.1',
     'depends': ['web_editor', 'web'],
     'assets': {
-        'web.assets_backend': [
-            ('after', 'web_editor/static/src/scss/web_editor.common.scss', 'viin_brand_web_editor/static/src/scss/web_editor.common.scss'),
-        ],
         'web.assets_frontend': [
-            ('after', 'web_editor/static/src/scss/web_editor.common.scss', 'viin_brand_web_editor/static/src/scss/web_editor.common.scss'),
-        ],
-        'web.report_assets_common': [
             ('after', 'web_editor/static/src/scss/web_editor.common.scss', 'viin_brand_web_editor/static/src/scss/web_editor.common.scss'),
         ],
     },
