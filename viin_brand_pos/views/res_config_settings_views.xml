@@ -13,6 +13,9 @@
             <xpath expr="//div[./label[@for='module_pos_six']]/a[hasclass('o_doc_link')]" position="attributes">
                 <attribute name="href">https://viindoo.com/documentation/16.0/applications/sales/point-of-sale/pricing-features/payment-with-six-payment-terminal-in-pos.html</attribute>
             </xpath>
+            <xpath expr="//a[contains(@attrs, 'pos_iface_tax_included')]" position="attributes">
+                <attribute name="href">https://viindoo.com/documentation/16.0/vi/applications/finance/accounting-and-invoicing/taxation/how-to-manage-price-tax-included-n-excluded.html</attribute>
+            </xpath>
         </field>
     </record>
 </odoo>
