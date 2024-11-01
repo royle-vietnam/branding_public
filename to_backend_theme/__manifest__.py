@@ -20,7 +20,7 @@ Backend theme for Viindoo, based on the Openworx Backend Theme
 
     # Categories can be used to filter modules in modules listing
     'category': 'Website/Theme/Backend',
-    'version': '1.0.23',
+    'version': '1.0.24',
 
     "depends": [
         'web',
@@ -39,6 +39,7 @@ Backend theme for Viindoo, based on the Openworx Backend Theme
             ('after', '/web_responsive/static/src/components/menu_canonical_searchbar/*', '/to_backend_theme/static/src/components/menu_canonical_searchbar/*'),
             'to_backend_theme/static/src/scss/style.scss',
             ('after', 'web/static/src/views/pivot/pivot_view.scss', 'to_backend_theme/static/src/views/pivot/pivot_view.scss'),
+            ('after', 'web/static/src/views/kanban/kanban_dashboard.scss', 'to_backend_theme/static/src/views/kanban/kanban_dashboard.scss'),
             ],
         },
     'post_init_hook': 'post_init_hook',
