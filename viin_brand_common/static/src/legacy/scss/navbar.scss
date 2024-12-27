@@ -1,16 +1,49 @@
-.o_apps_menu_opened {
-    .o_main_navbar {
-        background-color : transparent;
-    }
-}
-
 .o_main_navbar {
-    background-color : white;
-	border-bottom: none !important;
+	background-color : $brand-primary-dark;
+	border-bottom: 1px solid $brand-primary-darker;
+
+	.show {
+		.dropdown-toggle {
+			background-color: $brand-primary-darker;
+		}
+	}
 
 	a.dropdown-toggle{
 			    text-decoration: none;
 		}
+
+	> a,
+	> button {
+		&:hover,
+		&:focus {
+			background-color: $brand-primary-dark;
+		}
+	}
+
+	> ul {
+		> li {
+			&.o_extra_menu_items {
+				&.show {
+					> ul {
+						> li {
+							> a {
+								&.dropdown-toggle {
+									background-color: $brand-primary-dark !important;
+								}
+							}
+						}
+					}
+				}
+			}
+			> label,
+			> a {
+				&:hover,
+				&:focus{
+					background-color: $brand-primary-dark;
+				}
+			}
+		}
+	}
 }
 // = SuperUser Design
 // ============================================================================
@@ -27,7 +60,6 @@ body.o_is_superuser .o_menu_systray {
 				height: auto;
 				border-radius: 0.25rem;
 				background-color: var(--o-navbar-badge-bg, #{$o-enterprise-primary-color});
-				color:white;
             }
 		}
 	}
