@@ -36,7 +36,7 @@ Mô đun này thay đổi một vài thông tin dành riêng cho thương hiệu
     'live_test_url_vi_VN': "https://v16demo-vn.viindoo.com",
     'support': "apps.support@viindoo.com",
     'category': 'Hidden',
-    'version': '0.2',
+    'version': '0.1',
     'depends': ['viin_brand', 'web'],
     'data': [
         'views/ir_module_views.xml',
@@ -80,7 +80,6 @@ Mô đun này thay đổi một vài thông tin dành riêng cho thương hiệu
             ('after', 'web/static/src/views/fields/statusbar/statusbar_field.scss', 'viin_brand_common/static/src/views/fields/statusbar/statusbar_field.scss'),
             ('after', 'web/static/src/views/form/button_box/button_box.scss', 'viin_brand_common/static/src/views/form/button_box/button_box.scss'),
             ('after', 'web/static/src/webclient/webclient.js', 'viin_brand_common/static/src/webclient/webclient.js'),
-            ('before', 'web/static/src/webclient/navbar/navbar.variables.scss', 'viin_brand_common/static/src/webclient/navbar/navbar_variables.scss'),
             'viin_brand_common/static/src/webclient/navbar/navbar.scss',
             'viin_brand_common/static/src/webclient/user_menu_item.js',
             'viin_brand_common/static/src/views/widgets/**/*',
