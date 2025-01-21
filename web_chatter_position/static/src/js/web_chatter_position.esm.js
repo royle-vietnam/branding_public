@@ -106,7 +106,17 @@ patch(FormCompiler.prototype, "web_chatter_position", {
                 const formSheetBgXml = res.querySelector(".o_form_sheet_bg");
                 if (!formSheetBgXml) {
                     return res
+                } 
+                // Begin Fix for note form view
+                const noteFormView = res.querySelector(".o_note_form_view");
+                if (noteFormView) {
+                    const attfClass = noteFormView.getAttribute('t-attf-class');
+                    if (attfClass.includes("flex-nowrap h-100")) {
+                        const newAttfClass = attfClass.replace("flex-nowrap h-100", "flex-column");
+                        noteFormView.setAttribute('t-attf-class', newAttfClass);
+                    }
                 }
+                // End Fix for note form view
                 const sheetBgChatterContainerHookXml =
                     chatterContainerHookXml.cloneNode(true);
                 sheetBgChatterContainerHookXml.classList.add("o-isInFormSheetBg");
