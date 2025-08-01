@@ -80,18 +80,14 @@ export const appsMenuService = {
             },
             toggleMenu(openState) {
                 return new Mutex().exec(async () => {
-                    try {
-                        if (openState || !isOpening) {
-                            await env.services.action.doAction({
-                                name: _t("Home Menu"),
-                                type: "ir.actions.client",
-                                tag: "apps_menu",
-                            });
-                        } else {
-                            await env.services.action.restore();
-                        }
-                    } catch (e) {
-                        throw e;
+                    if (openState || !isOpening) {
+                        await env.services.action.doAction({
+                            name: _t("Home Menu"),
+                            type: "ir.actions.client",
+                            tag: "apps_menu",
+                        });
+                    } else {
+                        await env.services.action.restore();
                     }
                     return nextTick();
                 });
