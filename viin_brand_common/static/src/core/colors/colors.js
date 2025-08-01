@@ -1,5 +1,6 @@
 /** @odoo-module **/
 
+/* eslint-disable no-import-assign */
 import * as colors from "@web/core/colors/colors";
 
 var GRAPH_COLORS = [
