@@ -1,5 +1,3 @@
-/** @odoo-module **/
-
 /* Copyright 2018 Tecnativa - Jairo Llopis
  * Copyright 2021 ITerra - Sergey Shebanin
  * Copyright 2023 Onestein - Anjeel Haria
@@ -8,8 +6,13 @@
 
 export function getWebIconData(menu) {
     const result = "/web_responsive/static/img/default_icon_app.png";
+    const webIcon = menu.webIcon;
+    if (webIcon && webIcon.split(",").length === 2) {
+        const path = webIcon.replace(",", "/");
+        return path.startsWith("/") ? path : "/" + path;
+    }
     const iconData = menu.webIconData;
-    if (!iconData) {
+    if (!menu.webIcon) {
         return result;
     }
     const prefix = iconData.startsWith("P")

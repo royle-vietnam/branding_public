@@ -6,6 +6,7 @@
         overflow: unset;
 
         .o_form_sheet {
+            overflow: auto;
 
             &::-webkit-scrollbar {
                 width: 10px;

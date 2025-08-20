@@ -5,13 +5,11 @@
 
 :root {
     .o_grid_apps_menu[data-theme="milk"] {
-        --app-menu-text-color: #374151;
-        --apps-menu-scrollbar-background: #374151;
-        --apps-menu-empty-search-color: #374151;
+        --apps-menu-scrollbar-background: #{$o-brand-odoo};
+        --apps-menu-empty-search-color: $app-menu-text-color;
     }
 
     .o_grid_apps_menu[data-theme="community"] {
-        --app-menu-text-color: white;
         --apps-menu-scrollbar-background: white;
         --apps-menu-empty-search-color: white;
     }
@@ -66,6 +64,8 @@
         background-size: contain;
         white-space: normal;
         font-weight: 100;
+        background-color: white;
+        box-shadow: $app-menu-box-shadow;
         margin: 0 4px;
         border-radius: 4px;
 
@@ -78,8 +78,8 @@
         }
 
         &__name {
-            color: var(--app-menu-text-color);
-            text-shadow: 0 0 var(--app-menu-text-color);
+            color: $app-menu-text-color;
+            text-shadow: 0 0 $app-menu-text-color;
         }
 
         &__image {
@@ -93,6 +93,7 @@
         &.highlight,
         &:hover {
             background-color: $app-menu-item-highlight;
+            box-shadow: $app-menu-box-shadow-highlight;
             font-weight: 300;
         }
 

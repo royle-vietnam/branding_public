@@ -23,13 +23,17 @@ $chatter_zone_width: 35% !important;
         align-items: center;
         height: 35px;
     }
-    .o_calendar_widget {
-        .fc-dayGridMonth-view {
-            .fc-week-number {
-                display: none;
+    .o_calendar_view .o_calendar_widget {
+        .fc-timeGridDay-view .fc-axis,
+        .fc-timeGridWeek-view .fc-axis {
+            padding-left: 0px;
+        }
+        .fc-dayGridYear-view {
+            padding-left: 0px;
+            > .fc-month-container {
+                width: 95%;
             }
         }
-
         .fc-timeGridDay-view {
             .fc-day-header {
                 vertical-align: middle;
@@ -65,7 +69,9 @@ $chatter_zone_width: 35% !important;
         // Some UX improvements for form in edit mode
         @include media-breakpoint-down(sm) {
             &.o_form_editable .o_field_widget {
-                &:not(.o_stat_info):not(.o_readonly_modifier):not(.oe_form_field_html):not(.o_field_image) {
+                &:not(.o_stat_info):not(.o_readonly_modifier):not(
+                        .oe_form_field_html
+                    ):not(.o_field_image) {
                     min-height: 35px;
                 }
 
@@ -192,7 +198,7 @@ body:not(.o_statusbar_buttons) {
 .o_list_table {
     .o_handle_cell,
     .o_list_record_remove {
-        vertical-align: top;
+        vertical-align: middle;
     }
 }
 

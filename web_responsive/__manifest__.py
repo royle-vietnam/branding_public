@@ -9,16 +9,16 @@
 {
     "name": "Web Responsive",
     "summary": "Responsive web client, community-supported",
-    "version": "17.0.1.0.4",
+    "version": "18.0.1.0.2",
     "category": "Website",
     "website": "https://github.com/OCA/web",
     "author": "LasLabs, Tecnativa, ITerra, Onestein, "
     "Odoo Community Association (OCA)",
     "license": "LGPL-3",
-    "installable": False,
-    "depends": ["web", "mail"],
+    "installable": True,
+    "depends": ["web", "web_tour", "mail"],
     "development_status": "Production/Stable",
-    "maintainers": ["Yajo", "Tardo", "SplashS"],
+    "maintainers": ["Tardo", "SplashS"],
     "excludes": ["web_enterprise"],
     "data": [
         "views/res_users_views.xml",
@@ -43,8 +43,6 @@
             "/web_responsive/static/src/components/menu_odoo_searchbar/*",
             "/web_responsive/static/src/components/menu_fuse_searchbar/*",
             "/web_responsive/static/src/components/menu_searchbar/*",
-            "/web_responsive/static/src/components/navbar/*",
-            "/web_responsive/static/src/components/webclient/*",
             "/web_responsive/static/src/components/hotkey/*",
             "/web_responsive/static/src/components/file_viewer/*",
             "/web_responsive/static/src/components/chatter/*",
@@ -52,8 +50,8 @@
             "/web_responsive/static/src/components/command_palette/*",
             "/web_responsive/static/src/views/form/*",
         ],
-        "web.assets_tests": [
-            "/web_responsive/static/tests/test_patch.js",
+        "web.assets_clickbot": [
+            "/web_responsive/static/src/clickbot/clickbot.esm.js",
         ],
         "web.qunit_suite_tests": [
             "/web_responsive/static/tests/apps_menu_tests.esm.js",

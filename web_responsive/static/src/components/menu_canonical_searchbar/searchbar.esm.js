@@ -1,20 +1,20 @@
-/** @odoo-module **/
+/* global console */
 /* Copyright 2018 Tecnativa - Jairo Llopis
  * Copyright 2021 ITerra - Sergey Shebanin
  * Copyright 2023 Onestein - Anjeel Haria
  * Copyright 2023 Taras Shabaranskyi
  * License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). */
 
-import { Component, onPatched, onWillPatch, useRef, useState } from "@odoo/owl";
+import {Component, onPatched, onWillPatch, useRef, useState} from "@odoo/owl";
 import {
     collectRootMenuItems,
     collectSubMenuItems,
 } from "@web_responsive/components/apps_menu_tools.esm";
-import { useAutofocus, useService } from "@web/core/utils/hooks";
-import { debounce } from "@web/core/utils/timing";
-import { escapeRegExp } from "@web/core/utils/strings";
-import { fuzzyLookup } from "@web/core/utils/search";
-import { scrollTo } from "@web/core/utils/scrolling";
+import {useAutofocus, useService} from "@web/core/utils/hooks";
+import {debounce} from "@web/core/utils/timing";
+import {escapeRegExp} from "@web/core/utils/strings";
+import {fuzzyLookup} from "@web/core/utils/search";
+import {scrollTo} from "@web/core/utils/scrolling";
 
 /**
  * @extends Component
@@ -28,7 +28,7 @@ export class AppsMenuCanonicalSearchBar extends Component {
             offset: 0,
             hasResults: false,
         });
-        this.searchBarInput = useAutofocus({ refName: "SearchBarInput" });
+        this.searchBarInput = useAutofocus({refName: "SearchBarInput"});
         this._searchMenus = debounce(this._searchMenus, 200);
         this.menuService = useService("menu");
         this.searchItemsRef = useRef("searchItems");
@@ -42,7 +42,7 @@ export class AppsMenuCanonicalSearchBar extends Component {
      * @returns {String}
      */
     get inputValue() {
-        const { el } = this.searchBarInput;
+        const {el} = this.searchBarInput;
         return el ? el.value : "";
     }
 
@@ -57,7 +57,7 @@ export class AppsMenuCanonicalSearchBar extends Component {
      * @returns {Number}
      */
     get totalItemsCount() {
-        const { rootItems, subItems } = this.state;
+        const {rootItems, subItems} = this.state;
         return rootItems.length + subItems.length;
     }
 
@@ -67,7 +67,7 @@ export class AppsMenuCanonicalSearchBar extends Component {
      * @returns {String}
      */
     highlighted(index, isSubMenu = false) {
-        const { state } = this;
+        const {state} = this;
         let _index = index;
         if (isSubMenu) {
             _index = state.rootItems.length + index;
@@ -98,7 +98,7 @@ export class AppsMenuCanonicalSearchBar extends Component {
      * Search among available menu items, and render that search.
      */
     _searchMenus() {
-        const { state } = this;
+        const {state} = this;
         const query = this.inputValue;
         state.hasResults = query !== "";
         if (!state.hasResults) {
@@ -107,6 +107,35 @@ export class AppsMenuCanonicalSearchBar extends Component {
             return;
         }
         const searchField = (item) => item.displayName;
+        // Update search results paths
+        for (const root in this.rootMenuItems) {
+            // Root is an app
+            if (this.rootMenuItems[root]?.actionPath) {
+                this.rootMenuItems[root].path =
+                    `/odoo/${this.rootMenuItems[root].actionPath}`;
+            }
+            // Root is a module
+            else {
+                this.rootMenuItems[root].path =
+                    `/odoo/action-${this.rootMenuItems[root].actionID}`;
+            }
+        }
+        for (const item in this.subMenuItems) {
+            for (const root in this.rootMenuItems) {
+                if (this.subMenuItems[item].appID === this.rootMenuItems[root].appID) {
+                    // Root is an app
+                    if (this.rootMenuItems[root]?.actionPath) {
+                        this.subMenuItems[item].path =
+                            `/odoo/${this.rootMenuItems[root].actionPath}/action-${this.subMenuItems[item].actionID}`;
+                    }
+                    // Root is a module
+                    else {
+                        this.subMenuItems[item].path =
+                            `/odoo/action-${this.subMenuItems[item].actionID}`;
+                    }
+                }
+            }
+        }
         state.rootItems = fuzzyLookup(query, this.rootMenuItems, searchField);
         state.subItems = fuzzyLookup(query, this.subMenuItems, searchField);
     }
@@ -118,7 +147,7 @@ export class AppsMenuCanonicalSearchBar extends Component {
             ev.preventDefault();
             if (this.inputValue) {
                 this.searchBarInput.el.value = "";
-                Object.assign(this.state, { rootItems: [], subItems: [] });
+                Object.assign(this.state, {rootItems: [], subItems: []});
                 this.state.hasResults = false;
             } else {
                 this.env.bus.trigger("ACTION_MANAGER:UI-UPDATED");
@@ -160,7 +189,9 @@ export class AppsMenuCanonicalSearchBar extends Component {
      * @private
      */
     _selectHighlightedSearchItem(element) {
-        const highlightedElement = element.querySelector(".highlight > .search-item__link");
+        const highlightedElement = element.querySelector(
+            ".highlight > .search-item__link"
+        );
         if (highlightedElement) {
             highlightedElement.click();
         } else {
@@ -191,7 +222,7 @@ export class AppsMenuCanonicalSearchBar extends Component {
 
     _computeResultOffset() {
         // Allow looping on results
-        const { state } = this;
+        const {state} = this;
         const total = this.totalItemsCount;
         if (state.offset < 0) {
             state.offset = total + state.offset;

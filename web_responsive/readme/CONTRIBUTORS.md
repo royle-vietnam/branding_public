@@ -19,3 +19,7 @@
 - David Vidal \<<david.vidal@tecnativa.com>\>
 
 - Taras Shabaranskyi \<<shabaranskij@gmail.com>\>
+
+- Angel Patel \<<patelangel1414@gmail.com>\>
+
+- Mohamed Alkobrosli \<<malkobrosly@kencove.com>\>
