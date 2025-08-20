@@ -43,7 +43,7 @@ Editions Supported
     'images': [
         # 'static/description/main_screenshot.png'
         ],
-    'installable': True,
+    'installable': False,
     'auto_install': ['website_slides'],
     'price': 0.0,
     'currency': 'EUR',

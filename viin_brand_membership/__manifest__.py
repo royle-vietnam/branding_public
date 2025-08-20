@@ -47,7 +47,7 @@ Module này sẽ thay đổi giao diện module Members theo thương hiệu Vii
     'data': [
         'views/partner_views.xml',
     ],
-    'installable': True,
+    'installable': False,
     'auto_install': True,
     'price': 0.0,
     'currency': 'EUR',

@@ -53,7 +53,7 @@ Module này sẽ thay đổi giao diện module Recruitment theo thương hiệu
     'data': [
         'views/res_config_settings_views.xml',
     ],
-    'installable': True,
+    'installable': False,
     'auto_install': True,
     'price': 0.0,
     'currency': 'EUR',

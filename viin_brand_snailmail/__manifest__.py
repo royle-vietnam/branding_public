@@ -54,7 +54,7 @@ Module này sẽ thay đổi giao diện các module Snail Mail theo thương hi
         ],
     },
 
-    'installable': True,
+    'installable': False,
     'auto_install': True,
     'price': 0.0,
     'currency': 'EUR',

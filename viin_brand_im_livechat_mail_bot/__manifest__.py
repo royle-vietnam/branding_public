@@ -43,7 +43,7 @@ Module này sẽ thay đổi giao diện module Tôi là Chat Bot Trực tuyến
 
     # any module necessary for this one to work correctly
     'depends': ['im_livechat_mail_bot', 'viin_brand_common'],
-    'installable': True,
+    'installable': False,
     'auto_install': True,
     'price': 0.0,
     'currency': 'EUR',

@@ -33,7 +33,7 @@ Editions Supported
             ('after', 'web_editor/static/src/scss/web_editor.common.scss', 'viin_brand_web_editor/static/src/scss/web_editor.common.scss'),
         ],
     },
-    'installable': True,
+    'installable': False,
     'auto_install': ['web_editor'],
     'price': 0.0,
     'currency': 'EUR',

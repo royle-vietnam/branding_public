@@ -57,7 +57,7 @@ Module này sẽ thay đổi giao diện module Base import theo thương hiệu
             'viin_brand_base_import/static/src/import_data_sidepanel/import_data_sidepanel.xml',
             ]
     },
-    'installable': True,
+    'installable': False,
     'auto_install': True,
     'price': 0.0,
     'currency': 'EUR',

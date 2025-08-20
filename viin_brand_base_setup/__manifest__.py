@@ -58,7 +58,7 @@ Module này sẽ thay đổi giao diện module Initial Setup Tools theo thươn
             'viin_brand_base_setup/static/src/webclient/settings_form_view/widgets/res_config_edition.xml',
         ],
     },
-    'installable': True,
+    'installable': False,
     'auto_install': True,
     'price': 0.0,
     'currency': 'EUR',

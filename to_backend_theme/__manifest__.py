@@ -43,7 +43,7 @@ Backend theme for Viindoo, based on the Openworx Backend Theme
             ],
         },
     'post_init_hook': 'post_init_hook',
-    'installable': True,
+    'installable': False,
     'auto_install': ['web'],
     'price': 99.9,
     'currency': 'EUR',

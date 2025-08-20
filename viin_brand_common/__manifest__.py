@@ -85,7 +85,7 @@ Mô đun này thay đổi một vài thông tin dành riêng cho thương hiệu
             'viin_brand_common/static/src/views/widgets/**/*',
         ],
     },
-    'installable': True,
+    'installable': False,
     'post_load': 'post_load',
     'auto_install': ['web'],
     'price': 9.9,

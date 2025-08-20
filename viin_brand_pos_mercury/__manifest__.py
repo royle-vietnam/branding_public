@@ -53,7 +53,7 @@ Module này sẽ thay đổi giao diện các module Vantiv Payment Services the
     'data': [
         'views/pos_config_settings_views.xml',
     ],
-    'installable': True,
+    'installable': False,
     'auto_install': True,
     'price': 0.0,
     'currency': 'EUR',
