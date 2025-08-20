@@ -1,6 +1,9 @@
 from . import controllers
 
-from odoo.addons.web.tests.test_webmanifest import WebManifestRoutesTest
+from odoo.tools import config
+
+if config.get('test_enable', False):
+    from odoo.addons.web.tests.test_webmanifest import WebManifestRoutesTest
 
 
 def pass_test(self):
@@ -11,6 +14,7 @@ def pass_test(self):
 
 
 def post_load():
-    WebManifestRoutesTest.test_apple_touch_icon = pass_test
-    WebManifestRoutesTest.test_webmanifest_unauthenticated = pass_test
-    WebManifestRoutesTest.test_webmanifest = pass_test
+    if config.get('test_enable', False):
+        WebManifestRoutesTest.test_apple_touch_icon = pass_test
+        WebManifestRoutesTest.test_webmanifest_unauthenticated = pass_test
+        WebManifestRoutesTest.test_webmanifest = pass_test

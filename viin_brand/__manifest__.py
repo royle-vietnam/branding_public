@@ -38,7 +38,7 @@ Mô đun này thay đổi một vài thông tin dành riêng cho thương hiệu
     'category': 'Hidden',
     'version': '0.1',
     'depends': ['base'],
-    'installable': False,
+    'installable': True,
     'auto_install': True,
     'price': 9.9,
     'currency': 'EUR',

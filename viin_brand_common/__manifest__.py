@@ -49,9 +49,6 @@ Mô đun này thay đổi một vài thông tin dành riêng cho thương hiệu
         'web._assets_primary_variables': [
             ('before', 'web/static/src/scss/primary_variables.scss', 'viin_brand_common/static/src/scss/primary_variables.scss'),
         ],
-        'web._assets_bootstrap': [
-            ('after', 'web/static/src/scss/helpers_backport.scss', 'viin_brand_common/static/src/scss/helpers_backport.scss'),
-            ],
         'web._assets_bootstrap_frontend': [
             ('after', 'web/static/src/scss/bootstrap_review_frontend.scss', 'viin_brand_common/static/src/scss/bootstrap_review_frontend.scss'),
         ],
@@ -85,7 +82,7 @@ Mô đun này thay đổi một vài thông tin dành riêng cho thương hiệu
             'viin_brand_common/static/src/views/widgets/**/*',
         ],
     },
-    'installable': False,
+    'installable': True,
     'post_load': 'post_load',
     'auto_install': ['web'],
     'price': 9.9,

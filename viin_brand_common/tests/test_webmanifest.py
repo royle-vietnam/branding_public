@@ -17,8 +17,8 @@ class BrandWebManifestRoutesTest(WebManifestRoutesTest):
         self.assertEqual(response.headers["Content-Type"], "application/manifest+json")
         data = response.json()
         self.assertEqual(data["name"], "Viindoo")
-        self.assertEqual(data["scope"], "/web")
-        self.assertEqual(data["start_url"], "/web")
+        self.assertEqual(data["scope"], "/odoo")
+        self.assertEqual(data["start_url"], "/odoo")
         self.assertEqual(data["display"], "standalone")
         self.assertEqual(data["background_color"], "#00bbce")
         self.assertEqual(data["theme_color"], "#00bbce")
@@ -32,7 +32,7 @@ class BrandWebManifestRoutesTest(WebManifestRoutesTest):
             self.assertGreater(len(shortcut["name"]), 0)
             self.assertGreater(len(shortcut["description"]), 0)
             self.assertGreater(len(shortcut["icons"]), 0)
-            self.assertTrue(shortcut["url"].startswith("/web#menu_id="))
+            self.assertTrue(shortcut["url"].startswith("/odoo?menu_id="))
 
     def test_brand_webmanifest_unauthenticated(self):
         """
@@ -43,8 +43,8 @@ class BrandWebManifestRoutesTest(WebManifestRoutesTest):
         self.assertEqual(response.headers["Content-Type"], "application/manifest+json")
         data = response.json()
         self.assertEqual(data["name"], "Viindoo")
-        self.assertEqual(data["scope"], "/web")
-        self.assertEqual(data["start_url"], "/web")
+        self.assertEqual(data["scope"], "/odoo")
+        self.assertEqual(data["start_url"], "/odoo")
         self.assertEqual(data["display"], "standalone")
         self.assertEqual(data["background_color"], "#00bbce")
         self.assertEqual(data["theme_color"], "#00bbce")
