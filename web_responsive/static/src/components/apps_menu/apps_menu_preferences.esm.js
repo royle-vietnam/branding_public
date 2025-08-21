@@ -7,6 +7,20 @@ import {useService} from "@web/core/utils/hooks";
 import {user} from "@web/core/user";
 
 class AppsMenuPreferences extends Component {
+    static props = {};
+    static template = xml`
+        <div class="o-dropdown dropdown o-dropdown--no-caret">
+            <button
+                role="button"
+                type="button"
+                title="App Menu Preferences"
+                class="dropdown-toggle o-dropdown--narrow"
+                t-on-click="_onClick">
+                    <i class="fa fa-tint fa-lg px-1"/>
+            </button>
+        </div>
+    `;
+
     setup() {
         this.action = useService("action");
         this.user = user;
@@ -20,19 +34,6 @@ class AppsMenuPreferences extends Component {
         this.action.doAction({...action, res_id: this.user.userId}, {onClose}).then();
     }
 }
-
-AppsMenuPreferences.template = xml`
-    <div class="o-dropdown dropdown o-dropdown--no-caret">
-        <button
-            role="button"
-            type="button"
-            title="App Menu Preferences"
-            class="dropdown-toggle o-dropdown--narrow"
-            t-on-click="_onClick">
-                <i class="fa fa-tint fa-lg px-1"/>
-        </button>
-    </div>
-`;
 
 registry
     .category("systray")

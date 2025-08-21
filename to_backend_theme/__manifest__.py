@@ -7,7 +7,7 @@
     "name": "Viindoo Backend Theme",
     "summary": "Mobile backend theme for Odoo community",
 
-	"description": """
+    "description": """
 Backend theme for Viindoo, based on the Openworx Backend Theme
 
     """,
