@@ -7,8 +7,8 @@ odoo.define(
     function (require) {
         "use strict";
 
-        const {stepUtils} = require("@web_tour/tour_service/tour_utils");
-        const {patch} = require("@web/core/utils/patch");
+        const { stepUtils } = require("@web_tour/tour_service/tour_utils");
+        const { patch } = require("@web/core/utils/patch");
 
         patch(stepUtils, {
             /* Make base odoo JS tests working */
