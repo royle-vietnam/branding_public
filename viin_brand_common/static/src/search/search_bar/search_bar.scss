@@ -11,7 +11,8 @@
     .o_searchview_facet_label {
         background: var(--SearchBar-facet-background, #{$brand-primary-dark});
         --background-color: #{$brand-primary-dark};
-
+        color: $o-white !important; // orignal is black
+        border-color: $brand-primary-dark;  // orignal is yellow
     }
     div.o_searchview_facet_label.btn-primary {
         border-color: transparent !important;
