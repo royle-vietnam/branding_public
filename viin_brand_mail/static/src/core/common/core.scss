@@ -1,0 +1,13 @@
+a.o_mail_redirect,
+a.o_channel_redirect {
+    background-color: initial;
+    padding-left: 0;
+    font-size: inherit;
+
+    &:hover,
+    &:focus,
+    &:focus-visible {
+        background-color: initial;
+        box-shadow: inherit;
+    }
+}

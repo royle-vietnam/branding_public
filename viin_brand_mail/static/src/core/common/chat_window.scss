@@ -2,3 +2,10 @@
     background-color: $brand-primary-dark !important;
     color: $white;
 }
+
+.o-mail-ChatWindow {
+    &.border {
+        border: $brand-primary-dark !important;
+    }
+    font-size: 1rem;
+}

@@ -25,10 +25,17 @@ $brand-secondary-lighter: lighten($brand-secondary, 20%) !default;
 $brand-secondary-super-light: lighten($brand-secondary, 50%) !default;
 $brand-secondary-super-lighter: lighten($brand-secondary, 55%) !default;
 
-$o-success: #00B365 !default;
+$o-success: #33d17a !default;
 $o-info: #0099E6 !default;
 $o-warning: #FFCC32 !default;
 $o-danger: #CC5252 !default;
+
+$o-theme-text-colors: (
+    "success": #33d17a,
+    "info": #0099E6,
+    "warning": #FFCC32,
+    "danger": #CC5252,
+)!default;
 
 $o-statusbar-height: 35px !default;
 
