@@ -34,7 +34,7 @@ Editions Supported
     'live_test_url_vi_VN': "https://v16demo-vn.viindoo.com",
     'support': "apps.support@viindoo.com",
     'category': 'Hidden',
-    'version': '0.1.3',
+    'version': '0.1.4',
 
     # any module necessary for this one to work correctly
     'depends': ['mail', 'viin_brand_common'],
@@ -59,6 +59,7 @@ Editions Supported
             ('after', 'mail/static/src/core/common/chat_window.scss', 'viin_brand_mail/static/src/core/common/chat_window.scss'),
             ('after', 'mail/static/src/core/common/im_status.scss', 'viin_brand_mail/static/src/core/common/im_status.scss'),
             ('after', 'mail/static/src/core/common/composer.scss', 'viin_brand_mail/static/src/core/common/composer.scss'),
+            ('after', 'mail/static/src/core/common/message.scss', 'viin_brand_mail/static/src/core/common/message.scss'),
             ('after', 'mail/static/src/core/common/message_seen_indicator.scss', 'viin_brand_mail/static/src/core/common/message_seen_indicator.scss'),
             ('after', 'mail/static/src/core/web/discuss_sidebar.scss', 'viin_brand_mail/static/src/core/web/discuss_sidebar.scss'),
             ('after', 'mail/static/src/core/web/messaging_menu.scss', 'viin_brand_mail/static/src/core/web/messaging_menu.scss'),

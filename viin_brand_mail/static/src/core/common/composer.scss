@@ -1,3 +1,14 @@
 .o-mail-Composer-input {
     min-height: 43px !important;
 }
+
+.o-mail-Chatter-logNote,
+.o-mail-Chatter-sendMessage {
+    &.btn-primary {
+        &.active {
+            background-color: $o-enterprise-primary-color;
+            border-color: $o-enterprise-primary-color;
+        }
+
+    }
+}
