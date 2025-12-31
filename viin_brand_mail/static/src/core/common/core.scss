@@ -11,6 +11,7 @@ a.o_channel_redirect {
         box-shadow: inherit;
     }
 }
+
 .o-discuss-badge {
-    --o-discuss-badge-bg: #{$brand-primary}; // sync with --o-navbar-badge-bg
+    --o-discuss-badge-bg: #{$o-brand-primary}; // #7f4282
 }
