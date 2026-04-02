@@ -53,7 +53,7 @@ Module này sẽ thay đổi giao diện các module Sale theo thương hiệu V
     'data': [
         'views/sale_views.xml',
     ],
-    'installable': True,
+    'installable': False,
     'auto_install': True,
     'price': 0.0,
     'currency': 'EUR',

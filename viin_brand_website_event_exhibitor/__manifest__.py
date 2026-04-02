@@ -54,7 +54,7 @@ Module này sẽ thay đổi giao diện module Event Exhibitors theo thương h
         'data/event_sponsor_demo.xml',
         'views/event_sponsor_views.xml',
     ],
-    'installable': True,
+    'installable': False,
     'auto_install': True,
     'price': 0.0,
     'currency': 'EUR',
