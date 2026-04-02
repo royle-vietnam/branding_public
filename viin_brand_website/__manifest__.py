@@ -35,7 +35,7 @@ Editions Supported
     # Check https://github.com/Viindoo/odoo/blob/15.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
     'category': 'Hidden',
-    'version': '0.1',
+    'version': '0.1.1',
 
     # any module necessary for this one to work correctly
     'depends': ['website'],
@@ -51,6 +51,9 @@ Editions Supported
     'assets': {
         'web.assets_backend': [
             'viin_brand_website/static/src/components/configurator/configurator.scss',
+        ],
+        'website.assets_editor': [
+            'viin_brand_website/static/src/components/resource_editor/resource_editor_warning.xml',
         ],
     },
     'images': [
