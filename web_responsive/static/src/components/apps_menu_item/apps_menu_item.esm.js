@@ -18,7 +18,6 @@ export class AppMenuItem extends Component {
         },
         onClick: Function,
     };
-
     setup() {
         super.setup();
         this.webIconData = getWebIconData(this.props.app);
@@ -48,3 +47,4 @@ export class AppMenuItem extends Component {
         }
     }
 }
+

@@ -20,7 +20,6 @@ class AppsMenuPreferences extends Component {
             </button>
         </div>
     `;
-
     setup() {
         this.action = useService("action");
         this.user = user;

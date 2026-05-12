@@ -57,7 +57,6 @@ export class AppsMenu extends Component {
             optional: true,
         },
     };
-
     setup() {
         super.setup();
         this.state = useState({open: false});
