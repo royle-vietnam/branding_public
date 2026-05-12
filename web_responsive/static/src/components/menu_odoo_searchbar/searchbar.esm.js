@@ -12,9 +12,8 @@ import {useAutofocus, useService} from "@web/core/utils/hooks";
  * @property {{el: HTMLInputElement}} searchBarInput
  */
 export class AppsMenuOdooSearchBar extends Component {
-    static props = {};
     static template = "web_responsive.AppsMenuOdooSearchBar";
-
+    static props = {};
     setup() {
         super.setup();
         this.state = useState({
@@ -62,3 +61,4 @@ export class AppsMenuOdooSearchBar extends Component {
         this.command.openMainPalette({searchValue}, null);
     }
 }
+
