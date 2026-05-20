@@ -41,6 +41,31 @@ msgid "Mass Mailing"
 msgstr ""
 
 #. module: viin_brand_mass_mailing
+#: model_terms:mailing.mailing,body_arch:mass_mailing.mass_mail_1
+msgid ""
+"Hello,\n"
+"                                                <br/><br/>\n"
+"                                                This month we shipped a refreshed CRM dashboard, faster pivot reports across every module, and new integrations that help your team close more deals — all without leaving Viindoo. We also welcomed 47 new customers and published our SME playbook, free to download below.\n"
+"                                                <br/><br/>\n"
+"                                                Curious about what's next? Join our live walkthrough on the 15th to see how teams like Phương Nam Foods cut their order cycle by 40% with Viindoo."
+msgstr ""
+
+#. module: viin_brand_mass_mailing
+#: model:mailing.mailing,name:mass_mailing.mass_mail_1
+msgid "Monthly Customer Update"
+msgstr ""
+
+#. module: viin_brand_mass_mailing
+#: model:mailing.mailing,subject:mass_mailing.mass_mail_1
+msgid "Your monthly Viindoo update: new features, tips & success stories"
+msgstr ""
+
+#. module: viin_brand_mass_mailing
+#: model_terms:mailing.mailing,body_arch:mass_mailing.mass_mail_1
+msgid " All Rights Reserved"
+msgstr ""
+
+#. module: viin_brand_mass_mailing
 #: model_terms:ir.ui.view,arch_db:viin_brand_mass_mailing.s_text_block
 msgid "That way, Viindoo evolves much faster than any other solution."
 msgstr ""
