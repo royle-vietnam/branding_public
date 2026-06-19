@@ -3,6 +3,7 @@
 /* Copyright 2023 Taras Shabaranskyi
  * License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). */
 
+import {Component, xml} from "@odoo/owl";
 import {click, getFixture, mount, patchWithCleanup} from "@web/../tests/helpers/utils";
 import {NavBar} from "@web/webclient/navbar/navbar";
 import {actionService} from "@web/webclient/actions/action_service";
@@ -16,6 +17,9 @@ import {uiService} from "@web/core/ui/ui_service";
 
 const serviceRegistry = registry.category("services");
 
+class MySystrayItem extends Component {}
+
+MySystrayItem.template = xml`<li class="my-item">my item</li>`;
 let baseConfig = {};
 let target = {};
 
