@@ -14,17 +14,17 @@ Backend theme for Viindoo, based on the Openworx Backend Theme
 
     'author': 'Openworx,T.V.T Marine Automation,Viindoo',
     'website': 'https://viindoo.com',
-    'live_test_url': "https://v16demo-int.viindoo.com",
-    'live_test_url_vi_VN': "https://v16demo-vn.viindoo.com",
+    'live_test_url': "https://v18demo-int.viindoo.com",
+    'live_test_url_vi_VN': "https://v18demo-vn.viindoo.com",
     'support': 'apps.support@viindoo.com',
 
     # Categories can be used to filter modules in modules listing
     'category': 'Website/Theme/Backend',
-    'version': '1.0.24',
+    'version': '1.0.25',
 
     "depends": [
         'web',
-        'web_editor',
+        'html_editor',
         'web_responsive',
         'viin_brand_common',
     ],
@@ -38,14 +38,14 @@ Backend theme for Viindoo, based on the Openworx Backend Theme
             ('after', '/web_responsive/static/src/components/apps_menu_item/*', '/to_backend_theme/static/src/components/apps_menu_item/*'),
             ('after', '/web_responsive/static/src/components/menu_canonical_searchbar/*', '/to_backend_theme/static/src/components/menu_canonical_searchbar/*'),
             'to_backend_theme/static/src/scss/style.scss',
-            ('after', 'web/static/src/views/kanban/kanban_dashboard.scss', 'to_backend_theme/static/src/views/kanban/kanban_dashboard.scss'),
+            ('after', 'web/static/src/views/kanban/kanban_record.scss', 'to_backend_theme/static/src/views/kanban/kanban_dashboard.scss'),
         ],
         'web.assets_backend_lazy': [
             ('after', 'web/static/src/views/pivot/pivot_view.scss', 'to_backend_theme/static/src/views/pivot/pivot_view.scss'),
         ],
     },
     'post_init_hook': 'post_init_hook',
-    'installable': False,
+    'installable': True,
     'auto_install': ['web'],
     'price': 99.9,
     'currency': 'EUR',
