@@ -20,6 +20,9 @@ import {scrollTo} from "@web/core/utils/scrolling";
  * @extends Component
  */
 export class AppsMenuCanonicalSearchBar extends Component {
+    static props = {};
+    static template = "web_responsive.AppsMenuCanonicalSearchBar";
+
     setup() {
         super.setup();
         this.state = useState({
@@ -231,6 +234,3 @@ export class AppsMenuCanonicalSearchBar extends Component {
         }
     }
 }
-
-AppsMenuCanonicalSearchBar.props = {};
-AppsMenuCanonicalSearchBar.template = "web_responsive.AppsMenuCanonicalSearchBar";

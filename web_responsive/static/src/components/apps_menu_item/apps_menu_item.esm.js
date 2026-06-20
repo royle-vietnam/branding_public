@@ -8,6 +8,17 @@ import {Component, onWillUpdateProps} from "@odoo/owl";
 import {getWebIconData} from "@web_responsive/components/apps_menu_tools.esm";
 
 export class AppMenuItem extends Component {
+    static template = "web_responsive.AppMenuItem";
+    static props = {
+        app: Object,
+        href: String,
+        currentApp: {
+            type: Object,
+            optional: true,
+        },
+        onClick: Function,
+    };
+
     setup() {
         super.setup();
         this.webIconData = getWebIconData(this.props.app);
@@ -37,16 +48,3 @@ export class AppMenuItem extends Component {
         }
     }
 }
-
-Object.assign(AppMenuItem, {
-    template: "web_responsive.AppMenuItem",
-    props: {
-        app: Object,
-        href: String,
-        currentApp: {
-            type: Object,
-            optional: true,
-        },
-        onClick: Function,
-    },
-});

@@ -50,6 +50,14 @@ patch(WebClient.prototype, {
 });
 
 export class AppsMenu extends Component {
+    static template = "web_responsive.AppsMenu";
+    static props = {
+        slots: {
+            type: Object,
+            optional: true,
+        },
+    };
+
     setup() {
         super.setup();
         this.state = useState({open: false});
@@ -175,16 +183,6 @@ patch(NavBar.prototype, {
     openAppMenu() {
         this.env.bus.trigger("APP_MENU:OPEN_APP_MENU");
         this._closeAppMenuSidebar();
-    },
-});
-
-Object.assign(AppsMenu, {
-    template: "web_responsive.AppsMenu",
-    props: {
-        slots: {
-            type: Object,
-            optional: true,
-        },
     },
 });
 
