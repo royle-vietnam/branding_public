@@ -19,3 +19,19 @@
         opacity: 1;
     }
 }
+
+.o-mail-ChatWindow {
+    &.border {
+        border: $brand-primary-dark !important;
+    }
+
+    font-size: 1rem;
+}
+
+.o-mail-ChatWindow-command {
+
+    &:hover,
+    &.o-active {
+        background-color: rgba(0, 0, 0, 0.25);
+    }
+}

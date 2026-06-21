@@ -26,3 +26,14 @@
     padding-top: 10px !important;
     padding-bottom: 10px !important;
 }
+
+.o-mail-Chatter-logNote,
+.o-mail-Chatter-sendMessage {
+    &.btn-primary {
+        &.active {
+            background-color: $o-enterprise-primary-color;
+            border-color: $o-enterprise-primary-color;
+        }
+
+    }
+}

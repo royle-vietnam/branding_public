@@ -1,7 +1,7 @@
 /* Copyright 2023 Taras Shabaranskyi
  * License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). */
 
-import {Component, xml} from "@odoo/owl";
+import {Component, xml, onWillStart, useState} from "@odoo/owl";
 import {registry} from "@web/core/registry";
 import {useService} from "@web/core/utils/hooks";
 import {user} from "@web/core/user";
@@ -9,7 +9,7 @@ import {user} from "@web/core/user";
 class AppsMenuPreferences extends Component {
     static props = {};
     static template = xml`
-        <div class="o-dropdown dropdown o-dropdown--no-caret">
+        <div t-if="state.hasSettingsAccess" class="o-dropdown dropdown o-dropdown--no-caret">
             <button
                 role="button"
                 type="button"
@@ -23,6 +23,11 @@ class AppsMenuPreferences extends Component {
     setup() {
         this.action = useService("action");
         this.user = user;
+        this.state = useState({hasSettingsAccess: false});
+
+        onWillStart(async () => {
+            this.state.hasSettingsAccess = await user.hasGroup("base.group_system");
+        });
     }
 
     async _onClick() {
