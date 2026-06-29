@@ -31,7 +31,7 @@ export class AppsMenu extends Component {
     setup() {
         super.setup();
         this.state = useState({open: false});
-        this.theme = session.apps_menu.theme || "milk";
+        this.theme = session.apps_menu?.theme || "milk";
         this.menuService = useService("menu");
         browser.localStorage.setItem("redirect_menuId", "");
         if (user.context.is_redirect_to_home) {
