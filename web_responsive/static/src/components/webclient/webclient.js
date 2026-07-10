@@ -1,6 +1,5 @@
 /** @odoo-module **/
 
-import { useService } from "@web/core/utils/hooks";
 import { WebClient } from "@web/webclient/webclient";
 import { patch } from "@web/core/utils/patch";
 
@@ -8,9 +7,14 @@ import { patch } from "@web/core/utils/patch";
 patch(WebClient.prototype, {
     setup() {
         super.setup();
-        this.appsMenuService = useService("apps_menu");
+        // Read apps_menu optionally so isolated core WebClient tests (which do
+        // not start this service) keep working once web_responsive is installed.
+        this.appsMenuService = this.env.services.apps_menu;
     },
     _loadDefaultApp() {
-        return this.appsMenuService.toggleMenu(true);
+        if (this.appsMenuService) {
+            return this.appsMenuService.toggleMenu(true);
+        }
+        return super._loadDefaultApp();
     },
 });
