@@ -52,6 +52,9 @@ Editions Supported
         'web.assets_backend': [
             'viin_brand_website/static/src/components/configurator/configurator.scss',
         ],
+        'web.assets_tests': [
+            'viin_brand_website/static/tests/tours/colorpicker_brand_override.js',
+        ],
     },
     'images': [
         # 'static/description/main_screenshot.png'
