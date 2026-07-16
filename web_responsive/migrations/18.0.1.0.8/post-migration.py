@@ -31,8 +31,13 @@ def migrate(cr, version):
         .with_context(active_test=False)
         .search([("action_id", "=", False), ("is_redirect_home", "=", False)])
     )
-    # Re-run safe: the is_redirect_home filter makes a second pass match nothing,
-    # so a user who has since opted out is never silently re-opted-in.
+    # Idempotency comes from the manifest version gate: Odoo runs this directory
+    # only while installed_version < 18.0.1.0.8, so this script cannot fire
+    # twice. The is_redirect_home clause only avoids a pointless write on rows
+    # already backfilled - it does NOT protect a user who has since opted out,
+    # because Odoo compiles boolean `= False` to `(col IS NULL OR col = FALSE)`
+    # (odoo/models.py:3223-3228), so an explicit False (opted out) and a NULL
+    # (never backfilled) row are indistinguishable to this ORM domain.
     # No cr.commit(): the upgrade driver owns the transaction boundary.
     if users:
         users.is_redirect_home = True

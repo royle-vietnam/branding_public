@@ -48,3 +48,17 @@ class TestIrHttp(HttpCase):
         session_info_str = self._find_session_info(line_items)
         self.assertIsInstance(session_info_str, str)
         self._test_session_info(json.loads(session_info_str))
+
+        # Flip the preference to its other value and re-fetch: this binds the
+        # assertion to the user's actual stored value on BOTH sides, so a
+        # hardcoded constant in ir_http.py (e.g. always True) - which would
+        # pass the block above - fails here.
+        admin.is_redirect_home = False
+        r = self.url_open("/web")
+        self.assertEqual(r.status_code, 200)
+        self.assertIsInstance(r.text, str)
+        line_items = r.text.splitlines()
+        self.assertTrue(bool(line_items))
+        session_info_str = self._find_session_info(line_items)
+        self.assertIsInstance(session_info_str, str)
+        self._test_session_info(json.loads(session_info_str))

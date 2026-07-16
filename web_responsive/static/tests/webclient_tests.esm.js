@@ -1,5 +1,5 @@
 /* global QUnit */
-/* Copyright 2023 Taras Shabaranskyi
+/* Copyright 2026 Viindoo
  * License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). */
 
 import {patchWithCleanup} from "@web/../tests/helpers/utils";
