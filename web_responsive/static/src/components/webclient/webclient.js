@@ -1,33 +1,25 @@
 /** @odoo-module **/
 
-import {useService} from "@web/core/utils/hooks";
-import {WebClient} from "@web/webclient/webclient";
-import { user } from "@web/core/user";
+import { WebClient } from "@web/webclient/webclient";
 import { patch } from "@web/core/utils/patch";
-import { onWillStart } from "@odoo/owl";
+import { session } from "@web/session";
 
 
 // Patch WebClient to show AppsMenu instead of default app
 patch(WebClient.prototype, {
     setup() {
         super.setup();
-        this.appsMenuService = useService("apps_menu");
-        onWillStart(async () => {
-            const is_redirect_home = await this.orm.searchRead(
-                "res.users",
-                [["id", "=", user.userId]],
-                ["is_redirect_home"],
-            );
-            user.updateContext({
-                is_redirect_to_home: is_redirect_home[0]?.is_redirect_home,
-            });
-        });
+        // Read apps_menu optionally so isolated core WebClient tests (which do
+        // not start this service) keep working once web_responsive is installed.
+        this.appsMenuService = this.env.services.apps_menu;
     },
     _loadDefaultApp() {
-        return this.appsMenuService.toggleMenu(true);
-        if (user.context.is_redirect_to_home) {
+        // The preference travels on session_info (see models/ir_http.py), so no
+        // per-boot RPC is needed and the optional chain stays falsy - never
+        // throwing - in isolated core tests that ship no session.apps_menu.
+        if (this.appsMenuService && session.apps_menu?.is_redirect_home) {
             return this.appsMenuService.toggleMenu(true);
         }
         return super._loadDefaultApp();
-    }
+    },
 });

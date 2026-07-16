@@ -14,6 +14,14 @@ class TestIrHttp(HttpCase):
         self.assertIsNotNone(apps_menu)
         self.assertTrue("search_type" in apps_menu)
         self.assertTrue("theme" in apps_menu)
+        self.assertTrue("is_redirect_home" in apps_menu)
+        admin = self.env.ref("base.user_admin")
+        self.assertEqual(
+            apps_menu["is_redirect_home"],
+            admin.is_redirect_home,
+            "session_info must expose the signed-in user's actual is_redirect_home "
+            "value (transported without an extra RPC), not a hardcoded default",
+        )
 
     def _find_session_info(self, line_items):
         key = "odoo.__session_info__ = "
@@ -25,6 +33,13 @@ class TestIrHttp(HttpCase):
 
     def test_session_info(self):
         self.authenticate("admin", "admin")
+        # Set the preference to a known, non-default value so the assertion in
+        # _test_session_info proves the transport carries the user's actual
+        # stored value through session_info, rather than coincidentally
+        # matching an unset default.
+        admin = self.env.ref("base.user_admin")
+        admin.action_id = False
+        admin.is_redirect_home = True
         r = self.url_open("/web")
         self.assertEqual(r.status_code, 200)
         self.assertIsInstance(r.text, str)

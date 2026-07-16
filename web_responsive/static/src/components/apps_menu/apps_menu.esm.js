@@ -16,7 +16,6 @@ import {patch} from "@web/core/utils/patch";
 import {router} from "@web/core/browser/router";
 import {session} from "@web/session";
 import {useHotkey} from "@web/core/hotkeys/hotkey_hook";
-import {user} from "@web/core/user";
 import {BurgerMenu} from "@web/webclient/burger_menu/burger_menu";
 
 
@@ -34,7 +33,7 @@ export class AppsMenu extends Component {
         this.theme = session.apps_menu?.theme || "milk";
         this.menuService = useService("menu");
         browser.localStorage.setItem("redirect_menuId", "");
-        if (user.context.is_redirect_to_home) {
+        if (session.apps_menu?.is_redirect_home) {
             this.router = router;
             const menuId = Number(this.router.current.menu_id || 0);
             this.state = useState({open: menuId === 0});
@@ -115,7 +114,7 @@ export class AppsMenu extends Component {
     }
 
     onMenuClick() {
-        if (!user.context.is_redirect_to_home) {
+        if (!session.apps_menu?.is_redirect_home) {
             this.setOpenState(!this.state.open);
         } else {
             const redirect_menuId =
