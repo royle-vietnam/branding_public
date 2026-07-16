@@ -35,7 +35,7 @@ Module này sẽ thay đổi giao diện các module Snail Mail theo thương hi
 """,
 
     'author': "Viindoo",
-    'website': "https://viindoo.com",
+    'website': "https://viindoo.com/apps/modules/18.0/viin_brand_snailmail?force_show=1",
     'live_test_url': "https://v18demo-int.viindoo.com",
     'live_test_url_vi_VN': "https://v18demo-vn.viindoo.com",
     'support': "apps.support@viindoo.com",
