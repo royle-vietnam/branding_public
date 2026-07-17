@@ -46,6 +46,7 @@
                     'btn-secondary': state.composerType !== 'note',
                     'my-2': !props.compactHeight
                 }"
+                t-att-disabled="!state.thread.hasWriteAccess and !(state.thread.hasReadAccess and state.thread.canPostOnReadonly) and props.threadId"
                 data-hotkey="shift+m"
                 t-on-click="() => this.toggleComposer('note')"
             >
