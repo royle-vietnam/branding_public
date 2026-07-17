@@ -67,6 +67,15 @@ Module này sẽ thay đổi màu sắc của thanh điều hướng (navbar), c
         'point_of_sale.assets_prod': [
             'viin_brand_pos/static/src/css/**/*',
         ],
+        'web.assets_unit_tests': [
+            # base Navbar class the test statically imports and stubs a patch onto
+            'point_of_sale/static/src/app/navbar/navbar.js',
+            # the module under test itself: registered lazily by the loader, triggered on
+            # demand from inside navbar_favicon_guard.test.js (see that file for why it is
+            # deliberately NOT statically imported here)
+            'viin_brand_pos/static/src/app/navbar/navbar.js',
+            'viin_brand_pos/static/tests/navbar_favicon_guard.test.js',
+        ],
     },
     'installable': True,
     'auto_install': True,
