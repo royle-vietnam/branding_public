@@ -55,6 +55,9 @@ Editions Supported
         'website.assets_editor': [
             'viin_brand_website/static/src/components/resource_editor/resource_editor_warning.xml',
         ],
+        'web.assets_tests': [
+            'viin_brand_website/static/tests/tours/colorpicker_brand_override.js',
+        ],
     },
     'images': [
         # 'static/description/main_screenshot.png'
