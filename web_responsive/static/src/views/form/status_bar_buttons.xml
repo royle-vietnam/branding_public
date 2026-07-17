@@ -13,12 +13,13 @@
         <xpath expr="//Dropdown" position="attributes">
             <attribute name="hotkey">'shift+a'</attribute>
         </xpath>
-        <xpath expr="//t[@t-set-slot='toggler']" position="replace">
-            <t t-set-slot="toggler">
-                <i class="fa fa-sliders me-1 me-sm-2" />
-                <span class="d-none d-sm-inline">Action</span>
-            </t>
-        </xpath>
+        <!-- Do NOT replace the toggler with an icon-only variant: upstream
+             Odoo (CE and EE) keeps the plain "Action" text toggler on mobile.
+             The icon-only toggler made .o_statusbar_buttons narrower than
+             core, which gave .o_statusbar_status enough room to render inline
+             arrow pills instead of collapsing into the current-stage dropdown
+             — breaking core mobile tours (test_main_flows main_flow_tour
+             waits for .o_statusbar_status .dropdown-toggle). -->
     </t>
 
 </templates>
