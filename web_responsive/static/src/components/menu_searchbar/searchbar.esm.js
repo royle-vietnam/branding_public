@@ -8,16 +8,15 @@ import {Component} from "@odoo/owl";
 import {session} from "@web/session";
 
 export class AppsMenuSearchBar extends Component {
-    static props = {};
     static template = "web_responsive.AppsMenuSearchBar";
+    static props = {};
     static components = {
         AppsMenuOdooSearchBar,
         AppsMenuCanonicalSearchBar,
         AppsMenuFuseSearchBar,
     };
-
     setup() {
         super.setup();
-        this.searchType = session.apps_menu.search_type || "canonical";
+        this.searchType = session.apps_menu?.search_type || "canonical";
     }
 }

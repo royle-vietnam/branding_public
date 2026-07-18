@@ -31,12 +31,12 @@ Mô đun này thay đổi một vài thông tin dành riêng cho thương hiệu
     """,
 
     'author': "Viindoo",
-    'website': " https://viindoo.com",
+    'website': "https://viindoo.com/apps/modules/19.0/viin_brand_common?force_show=1",
     'live_test_url': "https://v16demo-int.viindoo.com",
     'live_test_url_vi_VN': "https://v16demo-vn.viindoo.com",
     'support': "apps.support@viindoo.com",
     'category': 'Hidden',
-    'version': '0.3',
+    'version': '0.3.1',
     'depends': ['viin_brand', 'web'],
     'data': [
         'views/ir_module_views.xml',
@@ -62,12 +62,13 @@ Mô đun này thay đổi một vài thông tin dành riêng cho thương hiệu
             'viin_brand_common/static/src/legacy/scss/bootstrap_overridden_common.scss',
         ],
         'web._assets_core': [
-            ('after', 'web/static/src/core/**/*', 'viin_brand_common/static/src/core/colors/colors.js'),
+            ('after', 'web/static/src/core/**/*', 'viin_brand_common/static/src/core/**/*'),
         ],
         'web.assets_backend': [
             # common branding
             'viin_brand_common/static/src/legacy/scss/navbar.scss',
             'viin_brand_common/static/src/legacy/scss/systray.scss',
+            ('after', 'web/static/src/core/emoji_picker/emoji_picker.scss', 'viin_brand_common/static/src/core/emoji_picker/emoji_picker.scss'),
             ('after', 'web/static/src/webclient/webclient.scss', 'viin_brand_common/static/src/webclient/webclient.scss'),
             ('after', 'web/static/src/search/search_panel/search_view.scss', 'viin_brand_common/static/src/search/search_panel/search_view.scss'),
             ('after', 'web/static/src/search/search_bar/search_bar.scss', 'viin_brand_common/static/src/search/search_bar/search_bar.scss'),
@@ -80,6 +81,12 @@ Mô đun này thay đổi một vài thông tin dành riêng cho thương hiệu
             'viin_brand_common/static/src/webclient/navbar/navbar.scss',
             'viin_brand_common/static/src/webclient/user_menu_item.js',
             'viin_brand_common/static/src/views/widgets/**/*',
+        ],
+        'mail.assets_public': [
+            ('after', 'web/static/src/core/emoji_picker/emoji_picker.scss', 'viin_brand_common/static/src/core/emoji_picker/emoji_picker.scss'),
+        ],
+        'im_livechat.assets_embed_core': [
+            ('after', 'web/static/src/core/emoji_picker/emoji_picker.scss', 'viin_brand_common/static/src/core/emoji_picker/emoji_picker.scss'),
         ],
     },
     'installable': False,

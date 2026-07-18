@@ -170,14 +170,14 @@ msgstr ""
 #. module: web_responsive
 #: model_terms:ir.ui.view,arch_db:web_responsive.res_users_view_form_apps_menu_preferences
 msgid "a new search algorithm is used"
-msgstr ""
+msgstr "tìm kết quả ngay cả khi gõ chưa chính xác"
 
 #. module: web_responsive
 #: model_terms:ir.ui.view,arch_db:web_responsive.res_users_view_form_apps_menu_preferences
 msgid "the standard odoo search tool"
-msgstr ""
+msgstr "tìm kiếm nâng cao dành cho người quen sử dụng phím tắt"
 
 #. module: web_responsive
 #: model_terms:ir.ui.view,arch_db:web_responsive.res_users_view_form_apps_menu_preferences
 msgid "uses a standard algorithm"
-msgstr ""
+msgstr "tìm kiếm theo cách thông thường, dễ dùng"

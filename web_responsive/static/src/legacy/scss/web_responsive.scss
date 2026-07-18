@@ -108,6 +108,35 @@ $chatter_zone_width: 35% !important;
             }
         }
 
+        .o_form_statusbar {
+            // v19 core keeps the form statusbar non-sticky on mobile
+            // (web WebSuite "statusbar is non-sticky on mobile"); scope the sticky
+            // positioning to >=md so mobile keeps core's scroll behaviour.
+            @include media-breakpoint-up(md) {
+                position: sticky !important;
+                top: 0;
+                z-index: 2;
+            }
+            border-top: 0.5px solid $border-color;
+            border-bottom: 0.5px solid $border-color;
+            padding-bottom: 0px !important;
+            background: $white;
+        }
+
+        .o_form_sheet_bg {
+            padding-top: 0;
+            padding-left: 0;
+            padding-right: 0;
+            border-right: 1px solid $border-color;
+        }
+
+        .o_statusbar_buttons {
+            padding-left: 16px;
+        }
+
+        .o_form_sheet {
+            margin: 8px 32px;
+        }
         @include media-breakpoint-down(sm) {
             min-width: auto;
 
@@ -153,12 +182,6 @@ $chatter_zone_width: 35% !important;
         max-width: initial;
         min-width: initial;
         overflow: auto;
-    }
-}
-
-body:not(.o_statusbar_buttons) {
-    .oe-toolbar {
-        z-index: 0 !important;
     }
 }
 

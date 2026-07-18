@@ -6,48 +6,18 @@
  * Copyright 2023 Taras Shabaranskyi
  * License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). */
 
-import {Component, onWillStart, useState} from "@odoo/owl";
-import {useBus, useService} from "@web/core/utils/hooks";
+import { Component, useState, useRef } from "@odoo/owl";
+import { useBus, useService } from "@web/core/utils/hooks";
 import {AppMenuItem} from "@web_responsive/components/apps_menu_item/apps_menu_item.esm";
 import {AppsMenuSearchBar} from "@web_responsive/components/menu_searchbar/searchbar.esm";
 import {NavBar} from "@web/webclient/navbar/navbar";
-import {WebClient} from "@web/webclient/webclient";
 import {browser} from "@web/core/browser/browser";
 import {patch} from "@web/core/utils/patch";
 import {router} from "@web/core/browser/router";
 import {session} from "@web/session";
 import {useHotkey} from "@web/core/hotkeys/hotkey_hook";
-import {user} from "@web/core/user";
 import {BurgerMenu} from "@web/webclient/burger_menu/burger_menu";
 
-// Patch WebClient to show AppsMenu instead of default app
-patch(WebClient.prototype, {
-    setup() {
-        super.setup();
-        useBus(this.env.bus, "APPS_MENU:STATE_CHANGED", ({detail: state}) => {
-            document.body.classList.toggle("o_apps_menu_opened", state);
-        });
-        this.user = user;
-        onWillStart(async () => {
-            const is_redirect_home = await this.orm.searchRead(
-                "res.users",
-                [["id", "=", this.user.userId]],
-                ["is_redirect_home"]
-            );
-            user.updateContext({
-                is_redirect_to_home: is_redirect_home[0]?.is_redirect_home,
-            });
-        });
-        this.redirect = false;
-    },
-    _loadDefaultApp() {
-        if (user.context.is_redirect_to_home) {
-            this.env.bus.trigger("APPS_MENU:STATE_CHANGED", true);
-        } else {
-            super._loadDefaultApp();
-        }
-    },
-});
 
 export class AppsMenu extends Component {
     static template = "web_responsive.AppsMenu";
@@ -57,27 +27,27 @@ export class AppsMenu extends Component {
             optional: true,
         },
     };
-
     setup() {
         super.setup();
         this.state = useState({open: false});
-        this.theme = session.apps_menu.theme || "milk";
+        this.theme = session.apps_menu?.theme || "milk";
         this.menuService = useService("menu");
         browser.localStorage.setItem("redirect_menuId", "");
-        if (user.context.is_redirect_to_home) {
+        if (session.apps_menu?.is_redirect_home) {
             this.router = router;
             const menuId = Number(this.router.current.menu_id || 0);
             this.state = useState({open: menuId === 0});
         }
-        useBus(this.env.bus, "ACTION_MANAGER:UI-UPDATED", () => {
-            this.setOpenState(false);
+        this.actionService = useService("action");
+        this.homeIcon = useRef("homeIcon");
+        useBus(this.env.bus, "APPS_MENU:TOGGLE", ({ detail: open }) => {
+            this.setOpenState(open);
         });
         this._setupKeyNavigation();
     }
 
     setOpenState(open_state) {
         this.state.open = open_state;
-        this.env.bus.trigger("APPS_MENU:STATE_CHANGED", open_state);
     }
 
     /**
@@ -144,7 +114,7 @@ export class AppsMenu extends Component {
     }
 
     onMenuClick() {
-        if (!user.context.is_redirect_to_home) {
+        if (!session.apps_menu?.is_redirect_home) {
             this.setOpenState(!this.state.open);
         } else {
             const redirect_menuId =

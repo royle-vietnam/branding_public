@@ -28,14 +28,16 @@
 }
 
 .o-mail-Form-chatter {
-    .o-mail-SuggestedRecipient,
-    .o-mail-Chatter-recipientList {
+    // Odoo 19: ".o-mail-Chatter-recipientList" (added by
+    // components/chatter/base_recipients_list.xml) is intentionally dropped - see that
+    // file for why mail.BaseRecipientsList / mail.RecipientsInput no longer have an
+    // equivalent landing spot for this responsive indent.
+    .o-mail-SuggestedRecipient {
         margin-left: 0;
     }
 
     @include media-breakpoint-up(sm) {
-        .o-mail-SuggestedRecipient,
-        .o-mail-Chatter-recipientList {
+        .o-mail-SuggestedRecipient {
             margin-left: 42px;
         }
     }

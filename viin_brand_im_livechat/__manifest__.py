@@ -26,7 +26,7 @@ Editions Supported
     """,
 
     'author': "Viindoo",
-    'website': "https://viindoo.com",
+    'website': "https://viindoo.com/apps/modules/19.0/viin_brand_im_livechat?force_show=1",
     'live_test_url': "https://v18demo-int.viindoo.com",
     'live_test_url_vi_VN': "https://v18demo-vn.viindoo.com",
     'support': "apps.support@viindoo.com",
@@ -44,6 +44,11 @@ Editions Supported
     'demo': [
         'data/im_livechat_channel_demo.xml'
     ],
+    'assets': {
+        'im_livechat.assets_embed_core': [
+            'viin_brand_im_livechat/static/src/embed/common/livechat_button.xml',
+        ],
+    },
     'data': [
         'data/digest_data.xml',
         'data/im_livechat_chatbot_data.xml',

@@ -13,7 +13,7 @@ Backend theme for Viindoo, based on the Openworx Backend Theme
     """,
 
     'author': 'Openworx,T.V.T Marine Automation,Viindoo',
-    'website': 'https://viindoo.com',
+    'website': 'https://viindoo.com/apps/modules/19.0/to_backend_theme?force_show=1',
     'live_test_url': "https://v16demo-int.viindoo.com",
     'live_test_url_vi_VN': "https://v16demo-vn.viindoo.com",
     'support': 'apps.support@viindoo.com',

@@ -35,7 +35,7 @@ Module này sẽ thay đổi giao diện các module Sale theo thương hiệu V
 """,
 
     'author': "Viindoo",
-    'website': "https://viindoo.com",
+    'website': "https://viindoo.com/apps/modules/19.0/viin_brand_sale?force_show=1",
     'live_test_url': "https://v18demo-int.viindoo.com",
     'live_test_url_vi_VN': "https://v18demo-vn.viindoo.com",
     'support': "apps.support@viindoo.com",
@@ -53,6 +53,11 @@ Module này sẽ thay đổi giao diện các module Sale theo thương hiệu V
     'data': [
         'views/sale_views.xml',
     ],
+    'assets': {
+        'web.assets_backend': [
+            'viin_brand_sale/static/src/js/sale_action_helper/sale_action_helper.js',
+        ],
+    },
     'installable': False,
     'auto_install': True,
     'price': 0.0,

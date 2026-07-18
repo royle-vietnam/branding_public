@@ -26,7 +26,7 @@ Editions Supported
     """,
 
     'author': "Viindoo",
-    'website': "https://viindoo.com",
+    'website': "https://viindoo.com/apps/modules/19.0/viin_brand_website?force_show=1",
     'live_test_url': "https://v18demo-int.viindoo.com",
     'live_test_url_vi_VN': "https://v18demo-vn.viindoo.com",
     'support': "apps.support@viindoo.com",
@@ -35,7 +35,7 @@ Editions Supported
     # Check https://github.com/Viindoo/odoo/blob/15.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
     'category': 'Hidden',
-    'version': '0.1',
+    'version': '0.1.1',
 
     # any module necessary for this one to work correctly
     'depends': ['website'],
@@ -51,6 +51,12 @@ Editions Supported
     'assets': {
         'web.assets_backend': [
             'viin_brand_website/static/src/components/configurator/configurator.scss',
+        ],
+        'website.assets_editor': [
+            'viin_brand_website/static/src/components/resource_editor/resource_editor_warning.xml',
+        ],
+        'web.assets_tests': [
+            'viin_brand_website/static/tests/tours/colorpicker_brand_override.js',
         ],
     },
     'images': [

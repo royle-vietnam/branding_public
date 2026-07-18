@@ -35,7 +35,7 @@ Module này sẽ thay đổi màu sắc của thanh điều hướng (navbar), c
 """,
 
     'author': "Viindoo",
-    'website': "https://viindoo.com",
+    'website': "https://viindoo.com/apps/modules/19.0/viin_brand_pos?force_show=1",
     'live_test_url': "https://v18demo-int.viindoo.com",
     'live_test_url_vi_VN': "https://v18demo-vn.viindoo.com",
     'support': "apps.support@viindoo.com",
@@ -59,12 +59,26 @@ Module này sẽ thay đổi màu sắc của thanh điều hướng (navbar), c
             ('prepend', 'viin_brand_common/static/src/legacy/scss/bootstrap_overridden_common.scss'),
             ('after', 'point_of_sale/static/src/scss/pos.scss', 'viin_brand_pos/static/src/scss/style.scss'),
             'viin_brand_pos/static/src/app/screens/receipt/order_receipt.xml',
+            'viin_brand_pos/static/src/app/screens/saver_screen.xml',
             'viin_brand_pos/static/src/app/navbar/navbar.xml',
             'viin_brand_pos/static/src/app/navbar/navbar.js',
             ('after', 'point_of_sale/static/src/app/errors/error_handlers.js', 'viin_brand_pos/static/src/app/popups/offline_error_popup.js'),
         ],
         'point_of_sale.assets_prod': [
             'viin_brand_pos/static/src/css/**/*',
+        ],
+        'web.assets_unit_tests': [
+            # A stand-in for point_of_sale/static/src/app/navbar/navbar.js registered under the
+            # SAME module name (see mock_navbar_module.js for why): the real file drags in 9
+            # transitive POS-app files (cashier_name, proxy_status, sync_popup,
+            # sale_details_button, product_screen + its own large fan-out, input, order_tabs,
+            # customer_display/utils, pos_hook) that are not part of this shared bundle and
+            # cannot be added without pulling in effectively the whole POS UI tree.
+            'viin_brand_pos/static/tests/mock_navbar_module.js',
+            # the module under test - its only deps are the mock above and
+            # @web/core/utils/patch, both resolvable in this bundle
+            'viin_brand_pos/static/src/app/navbar/navbar.js',
+            'viin_brand_pos/static/tests/navbar_favicon_guard.test.js',
         ],
     },
     'installable': False,
