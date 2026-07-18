@@ -50,7 +50,7 @@ Module này sẽ thay đổi giao diện module Slides Forum theo thương hiệ
     'depends': ['website_slides_forum', 'viin_brand_website_forum'],
     # always loaded
     'post_init_hook': 'post_init_hook',
-    'installable': True,
+    'installable': False,
     'auto_install': ['website_slides_forum'],
     'price': 0.0,
     'currency': 'EUR',

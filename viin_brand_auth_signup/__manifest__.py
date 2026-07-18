@@ -54,7 +54,7 @@ Module này sẽ thay đổi giao diện module Signup Authentication theo thư�
         'data/mail_template_data.xml',
     ],
     'post_init_hook': '_post_init_hook',
-    'installable': True,
+    'installable': False,
     'auto_install': True,
     'price': 0.0,
     'currency': 'EUR',

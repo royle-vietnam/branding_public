@@ -59,7 +59,7 @@ Module này sẽ thay đổi giao diện module Hr Expense theo thương hiệu 
             'viin_brand_hr_expense/static/src/scss/viin_brand_hr_expense.scss',
         ],
     },
-    'installable': True,
+    'installable': False,
     'auto_install': True,
     'price': 0.0,
     'currency': 'EUR',
