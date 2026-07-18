@@ -35,7 +35,7 @@ Module này sẽ thay đổi giao diện module Forum theo thương hiệu Viind
 """,
 
     'author': "Viindoo",
-    'website': "https://viindoo.com",
+    'website': "https://viindoo.com/apps/modules/19.0/viin_brand_website_forum?force_show=1",
     'live_test_url': "https://v18demo-int.viindoo.com",
     'live_test_url_vi_VN': "https://v18demo-vn.viindoo.com",
     'support': "apps.support@viindoo.com",
@@ -48,11 +48,14 @@ Module này sẽ thay đổi giao diện module Forum theo thương hiệu Viind
 
     # any module necessary for this one to work correctly
     'depends': ['website_forum'],
-
+    'data': [
+        'views/forum_forum_template_faq.xml',
+    ],
     # always loaded
     'demo': [
         'data/forum_demo.xml',
     ],
+    'post_init_hook': 'post_init_hook',
     'installable': False,
     'auto_install': True,
     'price': 0.0,

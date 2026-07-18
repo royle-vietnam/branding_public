@@ -20,9 +20,8 @@ import {scrollTo} from "@web/core/utils/scrolling";
  * @extends Component
  */
 export class AppsMenuCanonicalSearchBar extends Component {
-    static props = {};
     static template = "web_responsive.AppsMenuCanonicalSearchBar";
-
+    static props = {};
     setup() {
         super.setup();
         this.state = useState({
@@ -202,6 +201,15 @@ export class AppsMenuCanonicalSearchBar extends Component {
         }
     }
 
+    /**
+     * @param {MouseEvent} ev
+     * @param {Object} menu
+     */
+    _onSearchItemClick(ev, menu) {
+        ev.preventDefault();
+        this.menuService.selectMenu(menu);
+    }
+
     _splitName(name) {
         if (!name) {
             return [];
@@ -234,3 +242,4 @@ export class AppsMenuCanonicalSearchBar extends Component {
         }
     }
 }
+

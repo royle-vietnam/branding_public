@@ -35,9 +35,9 @@ Module này sẽ thay đổi giao diện các module Payment Provider theo thư�
 """,
 
     'author': "Viindoo",
-    'website': "https://viindoo.com",
-    'live_test_url': "https://v17demo-int.viindoo.com",
-    'live_test_url_vi_VN': "https://v17demo-vn.viindoo.com",
+    'website': "https://viindoo.com/apps/modules/19.0/viin_brand_payment?force_show=1",
+    'live_test_url': "https://v18demo-int.viindoo.com",
+    'live_test_url_vi_VN': "https://v18demo-vn.viindoo.com",
     'support': "apps.support@viindoo.com",
 
     # Categories can be used to filter modules in modules listing

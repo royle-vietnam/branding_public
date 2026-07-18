@@ -29,16 +29,16 @@ Module này sẽ thay đổi giao diện module Calendar theo thương hiệu Vi
 """,
 
     'author': "Viindoo",
-    'website': "https://viindoo.com",
-    'live_test_url': "https://v17demo-int.viindoo.com",
-    'live_test_url_vi_VN': "https://v17demo-vn.viindoo.com",
+    'website': "https://viindoo.com/apps/modules/19.0/viin_brand_calendar?force_show=1",
+    'live_test_url': "https://v18demo-int.viindoo.com",
+    'live_test_url_vi_VN': "https://v18demo-vn.viindoo.com",
     'support': "apps.support@viindoo.com",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/16.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
     'category': 'Hidden',
-    'version': '0.1',
+    'version': '0.1.1',
 
     # any module necessary for this one to work correctly
     'depends': ['calendar'],
@@ -46,7 +46,9 @@ Module này sẽ thay đổi giao diện module Calendar theo thương hiệu Vi
     # always loaded
     'data': [
         'views/calendar_views.xml',
+        'data/mail_template_data.xml',
     ],
+    'post_init_hook': '_post_init_hook',
     'installable': False,
     'auto_install': True,
     'price': 0.0,
