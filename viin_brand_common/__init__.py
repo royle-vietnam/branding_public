@@ -1,4 +1,5 @@
 from . import controllers
+from . import models
 
 from odoo.addons.web.tests.test_webmanifest import WebManifestRoutesTest
 

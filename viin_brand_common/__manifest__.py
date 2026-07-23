@@ -67,6 +67,9 @@ Mô đun này thay đổi một vài thông tin dành riêng cho thương hiệu
         'web._assets_core': [
             ('after', 'web/static/src/core/**/*', 'viin_brand_common/static/src/core/**/*'),
         ],
+        'web.tests_assets': [
+            'viin_brand_common/static/tests/qunit_font_reset.css',
+        ],
         'web.assets_backend': [
             # common branding
             'viin_brand_common/static/src/legacy/scss/navbar.scss',
