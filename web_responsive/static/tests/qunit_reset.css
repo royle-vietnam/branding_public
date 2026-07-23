@@ -1,0 +1,15 @@
+/* Core list QUnit suites assert pixel column widths computed under the default
+   checkbox metrics; the "big checkboxes" restyle (+10px margin-right, 1.5em
+   box) shifts the record-selector column by exactly those pixels (runbot
+   223235/396399: ListView "column widths should depend on the content when
+   there is data" 41->51 and "editable list: resize column headers" 52->51).
+   This file loads only in web.tests_assets (after web.assets_backend) and pins
+   the test page back to core metrics; the real webclient keeps big checkboxes. */
+.o_list_view .o-checkbox:not(.o_boolean_toggle) {
+    margin-right: 0;
+    margin-top: 0;
+}
+.o_list_view .o-checkbox:not(.o_boolean_toggle) .form-check-input {
+    height: 1em;
+    width: 1em;
+}

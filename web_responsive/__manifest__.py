@@ -52,6 +52,9 @@
             "/web_responsive/static/src/components/command_palette/*",
             "/web_responsive/static/src/views/form/*",
         ],
+        "web.tests_assets": [
+            "/web_responsive/static/tests/qunit_reset.css",
+        ],
         "web.qunit_suite_tests": [
             "/web_responsive/static/tests/apps_menu_tests.esm.js",
             "/web_responsive/static/tests/apps_menu_search_tests.esm.js",
