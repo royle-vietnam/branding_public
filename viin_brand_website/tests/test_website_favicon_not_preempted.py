@@ -164,7 +164,7 @@ class UntouchedFaviconsGetBrandedTest(TransactionCase):
     """
 
     def test_only_websites_still_holding_cores_default_favicon_get_branded(self):
-        from odoo.addons.viin_brand_website import _brand_untouched_favicons
+        from .. import _brand_untouched_favicons
 
         Website = self.env["website"]
         core_default_favicon = Website._default_favicon()
