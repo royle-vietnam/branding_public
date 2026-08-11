@@ -18,10 +18,22 @@
 
 import { WebClient } from "@web/webclient/webclient";
 import { patch } from "@web/core/utils/patch";
+import { registry } from "@web/core/registry";
 import { VIIN_HOME_ACTION } from "./apps_menu_home";
 
 patch(WebClient.prototype, {
     _loadDefaultApp() {
+        // Divert to the home menu ONLY when that client action is actually registered.
+        // home_menu.js registers "viin_home_menu" into registry.category("actions") at module
+        // load, so in a real client the guard always passes. It matters in test environments
+        // that mount the WebClient against a cleaned-out action registry: an unguarded
+        // doAction() on an unknown tag throws during boot and takes the whole suite with it,
+        // whereas super() lands on the stock first-root-app exactly as an unthemed build does.
+        // Forward-ported intent from 18.0 web_responsive (221946b) - the module is gone at 19.0
+        // but this hook carries the identical hazard, so the guard is re-expressed here.
+        if (!registry.category("actions").contains(VIIN_HOME_ACTION)) {
+            return super._loadDefaultApp();
+        }
         return this.actionService.doAction(VIIN_HOME_ACTION);
     },
 
