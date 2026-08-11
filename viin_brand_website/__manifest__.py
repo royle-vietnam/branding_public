@@ -35,7 +35,7 @@ Editions Supported
     # Check https://github.com/Viindoo/odoo/blob/15.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
     'category': 'Hidden',
-    'version': '0.1.1',
+    'version': '0.1.2',
 
     # any module necessary for this one to work correctly
     'depends': ['website'],
@@ -69,6 +69,9 @@ Editions Supported
         ],
     'installable': True,
     'auto_install': True,
+    # Brands websites that already existed when this module landed - a field
+    # default cannot reach them. See __init__._brand_untouched_favicons.
+    'post_init_hook': 'post_init_hook',
     'price': 0.0,
     'currency': 'EUR',
     'license': 'OPL-1',

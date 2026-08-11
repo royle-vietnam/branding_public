@@ -143,3 +143,68 @@ class WebsiteFaviconNotPreemptedTest(HttpCase):
             "exactly what the removed `//t[@t-set='x_icon']` QWeb override used to force regardless "
             "of the website's own configured favicon" % BRAND_FAVICON_HREF,
         )
+
+
+@tagged("post_install", "-at_install")
+class UntouchedFaviconsGetBrandedTest(TransactionCase):
+    """AC-3: websites a field default could never reach must still end up branded - but ONLY those.
+
+    A `default=` fires at record CREATION, so it never reaches `website.default_website` (core
+    creates it while loading the `website` module, before this module's field extension exists) nor
+    any website predating this module's install. While the QWeb `x_icon` override was in place those
+    records still LOOKED branded, because the override forced the brand path at render time for
+    every website regardless of the stored field. Removing that override - correct, since it
+    destroyed website's own producer - makes the stored value render, so those records would fall
+    back to Odoo's icon. `__init__._brand_untouched_favicons` corrects them once, and both entry
+    points (the `post_init_hook` and migrations/0.1.2) delegate to it, so exercising it here covers
+    the install and upgrade paths alike.
+
+    The two assertions below are deliberately opposed: doing nothing fails the first, and
+    overwriting indiscriminately fails the second.
+    """
+
+    def test_only_websites_still_holding_cores_default_favicon_get_branded(self):
+        from odoo.addons.viin_brand_website import _brand_untouched_favicons
+
+        Website = self.env["website"]
+        core_default_favicon = Website._default_favicon()
+
+        # One website left exactly as core would have created it - the population a field default
+        # cannot reach.
+        untouched = Website.create({"name": "AC-3 Untouched"})
+        untouched.write({"favicon": core_default_favicon})
+        self.assertEqual(
+            untouched.favicon, core_default_favicon,
+            "fixture precondition: this website must start out holding core's own default favicon",
+        )
+
+        # One website whose owner deliberately configured a favicon. write() normalises through
+        # website._handle_favicon, so read the STORED value back and treat that as the baseline -
+        # comparing against the pre-write literal would test Odoo's image pipeline, not this fix.
+        configured = Website.create({"name": "AC-3 Configured"})
+        configured.write({
+            "favicon": image_to_base64(Image.new("RGB", (16, 16), color=(9, 8, 7)), "PNG")
+        })
+        configured_baseline = configured.favicon
+        self.assertNotEqual(
+            configured_baseline, core_default_favicon,
+            "fixture precondition: the configured website must not coincidentally hold core's default",
+        )
+
+        _brand_untouched_favicons(self.env)
+
+        self.assertNotEqual(
+            untouched.favicon, core_default_favicon,
+            "a website still holding core's stock favicon must be branded - it is one of the "
+            "records a field default can never reach, and since the QWeb x_icon override was "
+            "removed nothing else supplies branding for it",
+        )
+        self.assertTrue(
+            untouched.favicon,
+            "the branded favicon must be a real value, never emptied",
+        )
+        self.assertEqual(
+            configured.favicon, configured_baseline,
+            "a website whose owner configured its favicon must be left byte-identical - rewriting "
+            "it is precisely the regression that removing the QWeb override was meant to fix",
+        )
