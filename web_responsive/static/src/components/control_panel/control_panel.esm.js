@@ -1,11 +1,9 @@
-/* global clearTimeout, setTimeout */
-
 /* Copyright 2023 Taras Shabaranskyi
  * License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). */
 
-import {ControlPanel} from "@web/search/control_panel/control_panel";
-import {browser} from "@web/core/browser/browser";
-import {patch} from "@web/core/utils/patch";
+import { ControlPanel } from "@web/search/control_panel/control_panel";
+import { browser } from "@web/core/browser/browser";
+import { patch } from "@web/core/utils/patch";
 
 export const STICKY_CLASS = "o_mobile_sticky";
 
@@ -65,7 +63,12 @@ export const unpatchControlPanel = patch(ControlPanel.prototype, {
         this.scrollValueCollector.collect(scrollTop - this.oldScrollTop, (min, max) => {
             const delta = min + max;
             if (delta < -this.scrollHeaderGap || delta > this.scrollHeaderGap) {
-                rootEl.style.top = `${delta < 0 ? -rootEl.clientHeight : 0}px`;
+                // Never slide the panel away while the view sits near its top:
+                // navigating to a view that restores (then resets) its scroll
+                // position emits a negative delta, which used to leave the
+                // breadcrumbs stuck off-screen on the freshly opened view.
+                const hide = delta < 0 && scrollTop > rootEl.clientHeight;
+                rootEl.style.top = `${hide ? -rootEl.clientHeight : 0}px`;
             }
         });
 
