@@ -34,7 +34,7 @@ Editions Supported
     'live_test_url_vi_VN': "https://v18demo-vn.viindoo.com",
     'support': "apps.support@viindoo.com",
     'category': 'Hidden',
-    'version': '0.1.7',
+    'version': '0.1.6',
 
     # any module necessary for this one to work correctly
     'depends': ['mail', 'viin_brand_common'],
